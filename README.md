@@ -5,6 +5,7 @@ A [fes.js](https://github.com/WeBankFinTech/fes.js) + TypeScript starter templat
 ## Technology stack
 
 Basic:
+
 - [TypeScript](https://www.typescriptlang.org/)
 - [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Webpack](https://webpack.js.org/)
 - [JSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
@@ -14,33 +15,40 @@ Basic:
 - [Stylelint](https://stylelint.io/) for linting CSS and SCSS
 
 `master` branch:
+
 - [Element Plus](https://element-plus.org/): component library
 
 `antd` branch:
+
 - [Ant Design Vue](https://www.antdv.com/): component library
 
 ## Project setup
+
 ```shell
+npm install -g @fesjs/create-fes-app
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```shell
-fes dev
+npm run dev
 ```
 
 ### Compiles and minifies for production
+
 ```shell
-fes build
+npm run prod
 ```
 
 ### Lint & fix
+
 ```shell
 npm run lint
 npm run lint:fix
 ```
 
-See [Fes.js CLI docs](https://winixt.gitee.io/fesjs/zh/reference/cli/) for more.
+See [Fes.js CLI docs](https://winixt.gitee.io/fesjs/zh/reference/cli/) and [package.json](./package.json) for more.
 
 ## Guides & References
 
