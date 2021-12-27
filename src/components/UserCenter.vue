@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { useModel } from '@fesjs/fes'
-import type { State } from '@/app'
+import type { State } from '~/app'
 
 const initialState = useModel('@@initialState') as State
 </script>

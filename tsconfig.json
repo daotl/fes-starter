@@ -4,9 +4,7 @@
     "outDir": "build/dist",
     "baseUrl": ".",
     "paths": {
-      // TODO: `.fes.js` > `alias` doesn't support TS for now
-      // "~/*": ["src/*"],
-      "@/*": ["src/*"],
+      "~/*": ["src/*"],
       "@@/*": ["src/.fes/*"]
     }
   },

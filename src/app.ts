@@ -1,6 +1,6 @@
 import { access } from '@fesjs/fes'
-import PageLoading from '@/components/PageLoading.vue'
-import UserCenter from '@/components/UserCenter.vue'
+import PageLoading from '~/components/PageLoading.vue'
+import UserCenter from '~/components/UserCenter.vue'
 
 export const beforeRender = {
   loading: PageLoading,

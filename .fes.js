@@ -2,10 +2,9 @@
 
 export default {
   publicPath: './',
-  // TODO: `alias` doesn't support TS for now
-  // alias: {
-  //   '~': 'src',
-  // },
+  alias: {
+    '~': '/src',
+  },
   access: {
     roles: {
       admin: ['*'],
