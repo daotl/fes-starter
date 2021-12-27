@@ -1,3 +1,3 @@
-# fes-template
+# fes-starter
 
-Template for [fes.js](https://github.com/WeBankFinTech/fes.js).
+A [fes.js](https://github.com/WeBankFinTech/fes.js) + TypeScript starter template.

@@ -1,25 +1,13 @@
 {
+  "extends": "@daotl/tsconfig/vue.json",
   "compilerOptions": {
     "outDir": "build/dist",
-    "module": "esnext",
-    "target": "esnext",
-    "lib": ["esnext", "dom"],
-    "sourceMap": true,
     "baseUrl": ".",
-    "jsx": "preserve",
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "strict": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@@/*": ["./src/.fes/*"]
+      // TODO: `.fes.js` > `alias` doesn't support TS for now
+      // "~/*": ["src/*"],
+      "@/*": ["src/*"],
+      "@@/*": ["src/.fes/*"]
     }
   },
   "include": [
@@ -33,5 +21,13 @@
     ".stylelintrc.js",
     ".prettierrc.js"
   ],
-  "exclude": ["node_modules", "build", "dist", "scripts", "src/.fes/*", "webpack", "jest"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "src/.fes/*",
+    "webpack",
+    "jest"
+  ]
 }
