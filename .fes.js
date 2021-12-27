@@ -1,4 +1,5 @@
 // .fes.js 只负责管理编译时配置，只能使用plain Object
+import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 
 export default {
@@ -32,6 +33,11 @@ export default {
     ],
   },
   chainWebpack(config) {
+    config.plugin('eslint').use(ESLintPlugin, [
+      {
+        files: 'src/**/*.{js,ts,tsx,vue}',
+      },
+    ])
     config.plugin('stylelint').use(StylelintPlugin, [
       {
         extensions: ['css', 'scss', 'vue', 'tsx'],
