@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "coenraads.bracket-pair-colorizer-2",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "oderwat.indent-rainbow",
+    "shardulm94.trailing-spaces",
+    "misterj.vue-volar-extention-pack"
+  ]
+}
