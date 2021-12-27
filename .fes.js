@@ -4,6 +4,8 @@ import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
 import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import IconsPlugin from 'unplugin-icons/webpack'
+import IconsResolver from 'unplugin-icons/resolver'
 
 export default {
   publicPath: './',
@@ -39,13 +41,16 @@ export default {
     config.plugin('eslint').use(ESLintPlugin, [
       {
         files: 'src/**/*.{js,ts,tsx,vue}',
+        fix: true,
       },
     ])
     config.plugin('stylelint').use(StylelintPlugin, [
       {
         extensions: ['css', 'scss', 'vue', 'tsx'],
+        fix: true,
       },
     ])
+
     config.plugin('auto-import').use(
       AutoImportPlugin({
         dts: './src/types/auto-imports.d.ts',
@@ -71,7 +76,7 @@ export default {
           /src\/.+\.vue$/,
           /src\/.+\.vue\?vue/, // .vue
         ],
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver(), IconsResolver()],
       }),
     )
     // Temporary workaround for Element Plus + unplugin-vue-components bug when importing `v-loading`
@@ -79,5 +84,12 @@ export default {
     config.externals({
       'element-plus/es/components/loading-directive/style/css': 'undefined',
     })
+
+    config.plugin('icons').use(
+      IconsPlugin({
+        compiler: 'vue3',
+        autoInstall: true, // expiremental
+      }),
+    )
   },
 }

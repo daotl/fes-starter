@@ -1,5 +1,10 @@
 <template>
-  <div class="right">{{ initialState.userName }}</div>
+  <div class="right">
+    <i-mdi-account-box
+      style="color: red; font-size: 2em; vertical-align: middle"
+    />
+    <span>{{ initialState.userName }}</span>
+  </div>
 </template>
 
 <script setup lang="ts">
