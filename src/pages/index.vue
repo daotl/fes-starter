@@ -14,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { enums } from '@fesjs/fes'
 
 const count = ref(0)

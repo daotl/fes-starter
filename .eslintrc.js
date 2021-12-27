@@ -5,6 +5,7 @@ module.exports = {
     project: 'tsconfig.json',
   },
   rules: {
+    'no-undef': 'off', // Turn off for `unplugin-auto-import`
     'vue/multi-word-component-names': 'off',
   },
   overrides: [
