@@ -5,6 +5,7 @@
 ### Custom ###
 
 src/.fes
+src/.fes-production
 
 ### Node ###
 # Logs

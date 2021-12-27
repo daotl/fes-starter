@@ -2,6 +2,7 @@
 import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
+import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 
 export default {
   publicPath: './',
@@ -58,6 +59,15 @@ export default {
           // presets
           'vue',
           'vue-router',
+        ],
+      }),
+    )
+    config.plugin('vue-components').use(
+      VueComponentsPlugin({
+        dts: './src/types/components.d.ts',
+        include: [
+          /src\/.+\.vue$/,
+          /src\/.+\.vue\?vue/, // .vue
         ],
       }),
     )
