@@ -10,7 +10,7 @@ Basic:
 - [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Webpack](https://webpack.js.org/)
 - [JSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
 - [SASS](https://sass-lang.com/) with [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax for styling
-- [ESLint](https://eslint.org/) with [@daotl/eslint-config-vue]() for linting
+- [ESLint](https://eslint.org/) with [@daotl/eslint-config-vue](https://github.com/daotl/web-style-configs#using-eslint-config) for linting
 - [Prettier](https://prettier.io/) with [@daotl/prettier-config](https://github.com/daotl/web-style-configs#using-prettier-config) for code formatting
 - [Stylelint](https://stylelint.io/) for linting CSS and SCSS
 
