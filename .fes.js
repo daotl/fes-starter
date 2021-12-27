@@ -3,6 +3,7 @@ import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
 import VueComponentsPlugin from 'unplugin-vue-components/webpack'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 export default {
   publicPath: './',
@@ -60,6 +61,7 @@ export default {
           'vue',
           'vue-router',
         ],
+        resolvers: [AntDesignVueResolver()],
       }),
     )
     config.plugin('vue-components').use(
@@ -69,6 +71,7 @@ export default {
           /src\/.+\.vue$/,
           /src\/.+\.vue\?vue/, // .vue
         ],
+        resolvers: [AntDesignVueResolver()],
       }),
     )
   },

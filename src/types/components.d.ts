@@ -4,9 +4,22 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
+    ADropdown: typeof import('ant-design-vue/es')['Dropdown']
+    ALayout: typeof import('ant-design-vue/es')['Layout']
+    ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
+    ALayoutFooter: typeof import('ant-design-vue/es')['LayoutFooter']
+    ALayoutHeader: typeof import('ant-design-vue/es')['LayoutHeader']
+    ALayoutSider: typeof import('ant-design-vue/es')['LayoutSider']
+    AMenu: typeof import('ant-design-vue/es')['Menu']
+    AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
+    AResult: typeof import('ant-design-vue/es')['Result']
+    ASubMenu: typeof import('ant-design-vue/es')['SubMenu']
+    ATabPane: typeof import('ant-design-vue/es')['TabPane']
+    ATabs: typeof import('ant-design-vue/es')['Tabs']
     PageLoading: typeof import('./../components/PageLoading.vue')['default']
     UserCenter: typeof import('./../components/UserCenter.vue')['default']
   }
 }
 
-export {}
+export { }

@@ -4,11 +4,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import Spin from 'ant-design-vue/lib/spin'
-import 'ant-design-vue/lib/spin/style/css'
-</script>
-
 <style scoped lang="scss">
 .page-loading {
   display: flex;
