@@ -3,6 +3,7 @@ import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
 import VueComponentsPlugin from 'unplugin-vue-components/webpack'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default {
   publicPath: './',
@@ -60,6 +61,7 @@ export default {
           'vue',
           'vue-router',
         ],
+        resolvers: [ElementPlusResolver()],
       }),
     )
     config.plugin('vue-components').use(
@@ -69,7 +71,13 @@ export default {
           /src\/.+\.vue$/,
           /src\/.+\.vue\?vue/, // .vue
         ],
+        resolvers: [ElementPlusResolver()],
       }),
     )
+    // Temporary workaround for Element Plus + unplugin-vue-components bug when importing `v-loading`
+    // See: https://github.com/element-plus/element-plus/issues/4855
+    config.externals({
+      'element-plus/es/components/loading-directive/style/css': 'undefined',
+    })
   },
 }

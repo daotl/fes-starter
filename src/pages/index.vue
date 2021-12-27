@@ -8,7 +8,7 @@
 
     <section>
       计数器
-      <button @click="increment">click me：{{ count }}</button>
+      <el-button @click="increment">click me：{{ count }}</el-button>
     </section>
   </div>
 </template>
