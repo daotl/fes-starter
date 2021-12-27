@@ -1,4 +1,5 @@
 // .fes.js 只负责管理编译时配置，只能使用plain Object
+import StylelintPlugin from 'stylelint-webpack-plugin'
 
 export default {
   publicPath: './',
@@ -29,5 +30,12 @@ export default {
       ['0', '无效的'],
       ['1', '有效的'],
     ],
+  },
+  chainWebpack(config) {
+    config.plugin('stylelint').use(StylelintPlugin, [
+      {
+        extensions: ['css', 'scss', 'vue', 'tsx'],
+      },
+    ])
   },
 }
