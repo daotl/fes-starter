@@ -13,7 +13,8 @@
     "eslint": "eslint src/**/*.{js,ts,tsx,vue}",
     "eslint:fix": "eslint src/**/*.{js,ts,tsx,vue} --fix",
     "stylelint": "stylelint src/**/*.{css,scss,vue,tsx}",
-    "stylelint:fix": "stylelint src/**/*.{css,scss,vue,tsx} --fix"
+    "stylelint:fix": "stylelint src/**/*.{css,scss,vue,tsx} --fix",
+    "prepare": "husky install"
   },
   "prettier": "@daotl/prettier-config",
   "keywords": [
@@ -43,6 +44,8 @@
     "@fesjs/plugin-sass": "^2.0.0",
     "@vue/compiler-sfc": "^3.2.26",
     "cross-env": "^7.0.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
     "postcss-html": "^1.3.0",
     "stylelint": "^14.2.0",
     "stylelint-config-property-sort-order-smacss": "^8.0.0",
@@ -58,5 +61,8 @@
     "@fesjs/plugin-model": "^2.0.3",
     "ant-design-vue": "^2.2.0",
     "vue": "^3.2.6"
+  },
+  "lint-staged": {
+    "*.css": "stylelint --fix"
   }
 }
