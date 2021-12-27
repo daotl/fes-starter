@@ -1,3 +1,10 @@
+<config>
+{
+    "name": "index",
+    "title": "首页"
+}
+</config>
+
 <template>
   <div style="padding: 32px">
     <h3>fes & 拉夫德鲁</h3>
@@ -24,10 +31,3 @@ const increment = () => {
 
 const enumsGet = enums.get
 </script>
-
-<config>
-{
-    "name": "index",
-    "title": "首页"
-}
-</config>
