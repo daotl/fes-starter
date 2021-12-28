@@ -42,7 +42,6 @@
     "@daotl/prettier-config": "^0.1.2",
     "@daotl/tsconfig": "^0.0.4",
     "@fesjs/plugin-sass": "^2.0.0",
-    "@fesjs/plugin-windicss": "^2.0.4",
     "@vue/compiler-sfc": "^3.2.26",
     "cross-env": "^7.0.3",
     "eslint-webpack-plugin": "^3.1.1",
@@ -59,7 +58,7 @@
     "unplugin-vue-components": "^0.17.11"
   },
   "dependencies": {
-    "@fesjs/fes": "^2.0.11",
+    "@fesjs/fes": "^2.0.12",
     "@fesjs/plugin-access": "^2.0.2",
     "@fesjs/plugin-enums": "^2.0.2",
     "@fesjs/plugin-layout": "^2.0.9",
