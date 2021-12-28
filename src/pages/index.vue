@@ -22,11 +22,13 @@
 
 <script setup lang="ts">
 import { enums } from '@fesjs/fes'
+import useCounterStore from '~/stores/counter'
 
-const count = ref(0)
+const store = useCounterStore()
+const count = computed(() => store.clicked)
 
 const increment = () => {
-  count.value++
+  store.clicked++
 }
 
 const enumsGet = enums.get

@@ -17,6 +17,7 @@ Basic:
 `master` branch:
 
 - [Element Plus](https://element-plus.org/): component library
+- [Pinia](https://pinia.vuejs.org/): state management
 - [Iconify](https://iconify.design/) icons with [unplugin-icons](https://github.com/antfu/unplugin-icons)
 
 `antd` branch:

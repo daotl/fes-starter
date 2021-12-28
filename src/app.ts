@@ -1,6 +1,14 @@
 import { access } from '@fesjs/fes'
+import type { App } from 'vue'
+import { createPinia } from 'pinia'
+
 import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'
+
+export function onAppCreated({ app }: { app: App }) {
+  const pinia = createPinia()
+  app.use(pinia)
+}
 
 export const beforeRender = {
   loading: PageLoading,
@@ -9,19 +17,10 @@ export const beforeRender = {
     return new Promise((resolve) => {
       setTimeout(() => {
         void setRole('admin')
-        // 初始化应用的全局状态，可以通过 useModel('@@initialState') 获取，具体用法看@/components/UserCenter 文件
-        resolve(state)
+        resolve({})
       }, 1000)
     })
   },
-}
-
-export type State = {
-  userName: string
-}
-
-const state: State = {
-  userName: 'harrywan',
 }
 
 export const layout = {

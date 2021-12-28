@@ -3,15 +3,15 @@
     <i-mdi-account-box
       style="color: red; font-size: 2em; vertical-align: middle"
     />
-    <span>{{ initialState.userName }}</span>
+    <span>{{ name }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useModel } from '@fesjs/fes'
-import type { State } from '~/app'
+import useUserStore from '~/stores/user'
 
-const initialState = useModel('@@initialState') as State
+const store = useUserStore()
+const name = store.name
 </script>
 
 <style scope lang="scss">
