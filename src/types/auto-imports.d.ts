@@ -8,6 +8,8 @@ declare global {
   const defineComponent: typeof import('vue')['defineComponent']
   const effectScope: typeof import('vue')['effectScope']
   const EffectScope: typeof import('vue')['EffectScope']
+  const ElButton: typeof import('element-plus/es')['ElButton']
+  const ElLoadingDirective: typeof import('element-plus/es')['ElLoadingDirective']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']

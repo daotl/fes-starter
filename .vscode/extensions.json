@@ -1,11 +1,13 @@
 {
   "recommendations": [
+    "misterj.vue-volar-extention-pack",
+    "christian-kohler.npm-intellisense",
     "coenraads.bracket-pair-colorizer-2",
     "davidanson.vscode-markdownlint",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
+    "ibm.output-colorizer",
     "oderwat.indent-rainbow",
-    "shardulm94.trailing-spaces",
-    "misterj.vue-volar-extention-pack"
+    "shardulm94.trailing-spaces"
   ]
 }
