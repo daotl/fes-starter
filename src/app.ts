@@ -1,6 +1,6 @@
 import { access } from '@fesjs/fes'
-import type { App } from 'vue'
 import { createPinia } from 'pinia'
+import type { App } from 'vue'
 
 import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'

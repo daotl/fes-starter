@@ -38,7 +38,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@daotl/eslint-config-vue": "0.2.3",
+    "@daotl/eslint-config-vue": "0.2.4",
     "@daotl/prettier-config": "^0.1.2",
     "@daotl/tsconfig": "^0.0.4",
     "@fesjs/plugin-sass": "^2.0.0",

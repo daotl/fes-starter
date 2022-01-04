@@ -22,6 +22,7 @@
 
 <script setup lang="ts">
 import { enums } from '@fesjs/fes'
+
 import useCounterStore from '~/stores/counter'
 
 const store = useCounterStore()
