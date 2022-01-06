@@ -6,6 +6,7 @@ A [fes.js](https://github.com/WeBankFinTech/fes.js) + TypeScript starter templat
 
 Basic:
 
+- [pnpm](https://pnpm.io/) for efficient package management
 - [TypeScript](https://www.typescriptlang.org/)
 - [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Webpack](https://webpack.js.org/)
 - [JSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
