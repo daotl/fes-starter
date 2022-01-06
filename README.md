@@ -29,7 +29,7 @@ Basic:
 
 ```shell
 npm install -g @fesjs/create-fes-app
-npm install
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
