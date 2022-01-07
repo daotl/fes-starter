@@ -4,18 +4,24 @@
     "outDir": "build/dist",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "@@/*": ["src/.fes/*"]
+      "~/*": [
+        "src/*"
+      ],
+      "@@/*": [
+        "src/.fes/*"
+      ]
     },
-    "types": ["node", "jest", "element-plus/global", "unplugin-icons/types/vue"]
+    "types": [
+      "node",
+      "jest",
+      "element-plus/global",
+      "unplugin-icons/types/vue"
+    ]
   },
   "include": [
-    "src/**/*",
-    "tests/**/*",
-    "test/**/*",
-    "__test__/**/*",
-    "typings/**/*",
-    "config/**/*",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.vue",
     ".eslintrc.js",
     ".stylelintrc.js"
   ],
@@ -23,9 +29,7 @@
     "node_modules",
     "build",
     "dist",
-    "scripts",
     "src/.fes/*",
-    "webpack",
-    "jest"
+    "src/.fes-production/*"
   ]
 }

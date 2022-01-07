@@ -11,8 +11,8 @@
     "test:unit": "fes test:unit",
     "lint": "npm run eslint && npm run stylelint",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
-    "eslint": "eslint src/**/*.{js,ts,tsx,vue}",
-    "eslint:fix": "eslint src/**/*.{js,ts,tsx,vue} --fix",
+    "eslint": "eslint **/*.{js,ts,tsx,vue}",
+    "eslint:fix": "eslint **/*.{js,ts,tsx,vue} --fix",
     "stylelint": "stylelint src/**/*.{css,scss,vue,tsx}",
     "stylelint:fix": "stylelint src/**/*.{css,scss,vue,tsx} --fix",
     "prepare": "husky install"
@@ -52,7 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/runtime": "^7.16.7",
-    "@daotl/eslint-config-vue": "0.2.4",
+    "@daotl/eslint-config-vue": "0.2.5",
     "@daotl/prettier-config": "^0.1.2",
     "@daotl/tsconfig": "^0.0.4",
     "@fesjs/plugin-sass": "^2.0.0",

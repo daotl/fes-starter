@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@babel/core': ^7.16.7
   '@babel/runtime': ^7.16.7
-  '@daotl/eslint-config-vue': 0.2.4
+  '@daotl/eslint-config-vue': 0.2.5
   '@daotl/prettier-config': ^0.1.2
   '@daotl/tsconfig': ^0.0.4
   '@fesjs/fes': ^2.0.15
@@ -53,7 +53,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.16.7
   '@babel/runtime': 7.16.7
-  '@daotl/eslint-config-vue': 0.2.4_28a3a701f46918df1e6724a5b8968675
+  '@daotl/eslint-config-vue': 0.2.5_28a3a701f46918df1e6724a5b8968675
   '@daotl/prettier-config': 0.1.2
   '@daotl/tsconfig': 0.0.4
   '@fesjs/plugin-sass': 2.0.0_@fesjs+fes@2.0.15+webpack@5.65.0
@@ -1372,8 +1372,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@daotl/eslint-config-vue/0.2.4_28a3a701f46918df1e6724a5b8968675:
-    resolution: {integrity: sha512-SI+SI20NcbSn0sYFxB0tmX3DiKY/WQdja2oSRbmlOIGX2cqwXXjZGFCU7+2wZLnE3BGh/OWisDVxmBVnC3CrqA==}
+  /@daotl/eslint-config-vue/0.2.5_28a3a701f46918df1e6724a5b8968675:
+    resolution: {integrity: sha512-EQu6t6thYRFX7r7AIRbrUsKyDG4uanbMhc1klcyzq2oDl3msbvft2SdfaizGmFF10BoJPbKfhzJ1Hk5Hz/JdFA==}
     dependencies:
       '@daotl/eslint-config': 0.2.4_28a3a701f46918df1e6724a5b8968675
       '@daotl/prettier-config': 0.1.2
