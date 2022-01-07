@@ -2,3 +2,17 @@
 body {
   margin: 0;
 }
+
+// Workaround for fes-plugin-layout bug
+// Workaround for menu item style
+.fes-menu-item-wrapper,
+.fes-sub-menu-wrapper {
+  box-sizing: border-box;
+}
+// Workaround for layout.sideWidth not working
+// .fes-layout-aside {
+//   width: 230px !important;
+// }
+// .fes-layout-aside + section {
+//   left: 230px !important;
+// }
