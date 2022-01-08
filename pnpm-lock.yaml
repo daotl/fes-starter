@@ -6,11 +6,11 @@ specifiers:
   '@daotl/eslint-config-vue': 0.2.5
   '@daotl/prettier-config': ^0.1.2
   '@daotl/tsconfig': ^0.0.4
-  '@fesjs/fes': ^2.0.15
+  '@fesjs/fes': ^2.0.16
   '@fesjs/fes-design': ^0.1.10
   '@fesjs/plugin-access': ^2.0.3
   '@fesjs/plugin-enums': ^2.0.2
-  '@fesjs/plugin-layout': ^4.0.0
+  '@fesjs/plugin-layout': ^4.0.1
   '@fesjs/plugin-sass': ^2.0.0
   '@iconify-json/mdi': ^1.0.12
   '@vue/compiler-sfc': ^3.2.26
@@ -20,7 +20,7 @@ specifiers:
   eslint: ^8.6.0
   eslint-webpack-plugin: ^3.1.1
   husky: ^7.0.4
-  lint-staged: ^12.1.5
+  lint-staged: ^12.1.7
   pinia: ^2.0.9
   pnpm: ^6.25.0
   postcss: ^8.4.5
@@ -40,11 +40,11 @@ specifiers:
   webpack: ^5.65.0
 
 dependencies:
-  '@fesjs/fes': 2.0.15_7b608312ed76c9b098ceb195811a5dc7
+  '@fesjs/fes': 2.0.16_7b608312ed76c9b098ceb195811a5dc7
   '@fesjs/fes-design': 0.1.10_vue@3.2.26
-  '@fesjs/plugin-access': 2.0.3_@fesjs+fes@2.0.15+vue@3.2.26
-  '@fesjs/plugin-enums': 2.0.2_@fesjs+fes@2.0.15+vue@3.2.26
-  '@fesjs/plugin-layout': 4.0.0_f855185463300eccb28150a95fa9f6ef
+  '@fesjs/plugin-access': 2.0.3_@fesjs+fes@2.0.16+vue@3.2.26
+  '@fesjs/plugin-enums': 2.0.2_@fesjs+fes@2.0.16+vue@3.2.26
+  '@fesjs/plugin-layout': 4.0.1_0c1206bc1608ad91f25cc7db4a8349c8
   core-js: 3.20.2
   element-plus: 1.3.0-beta.1_vue@3.2.26
   vue: 3.2.26
@@ -56,14 +56,14 @@ devDependencies:
   '@daotl/eslint-config-vue': 0.2.5_28a3a701f46918df1e6724a5b8968675
   '@daotl/prettier-config': 0.1.2
   '@daotl/tsconfig': 0.0.4
-  '@fesjs/plugin-sass': 2.0.0_@fesjs+fes@2.0.15+webpack@5.65.0
+  '@fesjs/plugin-sass': 2.0.0_@fesjs+fes@2.0.16+webpack@5.65.0
   '@iconify-json/mdi': 1.0.12
   '@vue/compiler-sfc': 3.2.26
   cross-env: 7.0.3
   eslint: 8.6.0
   eslint-webpack-plugin: 3.1.1_eslint@8.6.0+webpack@5.65.0
   husky: 7.0.4
-  lint-staged: 12.1.5
+  lint-staged: 12.1.7
   pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
   pnpm: 6.25.0
   postcss: 8.4.5
@@ -1481,13 +1481,13 @@ packages:
       - '@vue/composition-api'
     dev: false
 
-  /@fesjs/fes/2.0.15_7b608312ed76c9b098ceb195811a5dc7:
-    resolution: {integrity: sha512-e2a+JiyJXxei2x98b5sBzibTehYoN6cFd/CExc4V0dE5G0WpzQnC2bAZe2Sqbs0zGefpqEiWjVjwvBwfp28ZUA==}
+  /@fesjs/fes/2.0.16_7b608312ed76c9b098ceb195811a5dc7:
+    resolution: {integrity: sha512-ARljybu2iTo4AAdfXl06aV5MMr+PqQIAdpsKblJqS9ZFu/SUUqnD3UIso93Nmvb1Fl9K7b+WOXe8vFxJhtW/3Q==}
     engines: {node: ^10.12.0 || ^12.0.0 || >= 14.0.0}
     hasBin: true
     dependencies:
       '@fesjs/compiler': 2.0.3_@babel+core@7.16.7
-      '@fesjs/preset-built-in': 2.0.14_@vue+compiler-sfc@3.2.26
+      '@fesjs/preset-built-in': 2.0.16_@vue+compiler-sfc@3.2.26
       '@fesjs/runtime': 2.0.2_vue@3.2.26
       '@fesjs/utils': 2.0.3
       resolve-cwd: 3.0.0
@@ -1507,13 +1507,13 @@ packages:
       - webpack-cli
     dev: false
 
-  /@fesjs/plugin-access/2.0.3_@fesjs+fes@2.0.15+vue@3.2.26:
+  /@fesjs/plugin-access/2.0.3_@fesjs+fes@2.0.16+vue@3.2.26:
     resolution: {integrity: sha512-MtGqTT6jxraUXY1txDA3zW/NIH090+dWM53uYyPXT7KZifCzCq008+qLKNDMQHrr6b6mjrqVT1Uey8VwR3TOnA==}
     peerDependencies:
       '@fesjs/fes': ^2.0.0
       vue: ^3.0.5
     dependencies:
-      '@fesjs/fes': 2.0.15_7b608312ed76c9b098ceb195811a5dc7
+      '@fesjs/fes': 2.0.16_7b608312ed76c9b098ceb195811a5dc7
       '@fesjs/utils': 2.0.3
       lodash-es: 4.17.21
       vue: 3.2.26
@@ -1521,24 +1521,24 @@ packages:
       - supports-color
     dev: false
 
-  /@fesjs/plugin-enums/2.0.2_@fesjs+fes@2.0.15+vue@3.2.26:
+  /@fesjs/plugin-enums/2.0.2_@fesjs+fes@2.0.16+vue@3.2.26:
     resolution: {integrity: sha512-rqwUUJmFcM9IxCcFIRJArriB+znXGGHkJhQbp6H4n48l6mnvwoJ0ChXOPlF5Bp9R7Qtv9tn/0U0PJ0c0YZCaZA==}
     peerDependencies:
       '@fesjs/fes': ^2.0.0
       vue: ^3.0.5
     dependencies:
-      '@fesjs/fes': 2.0.15_7b608312ed76c9b098ceb195811a5dc7
+      '@fesjs/fes': 2.0.16_7b608312ed76c9b098ceb195811a5dc7
       vue: 3.2.26
     dev: false
 
-  /@fesjs/plugin-layout/4.0.0_f855185463300eccb28150a95fa9f6ef:
-    resolution: {integrity: sha512-/2cJdIyRrTD4zwF7IJ+O4UzN+jQ4M4vs6nlKwxWh9XE+e8cC7cTYhEwcevlTpYsIYlB2TUmCvSmDH1sxT6PhEA==}
+  /@fesjs/plugin-layout/4.0.1_0c1206bc1608ad91f25cc7db4a8349c8:
+    resolution: {integrity: sha512-SVOtyUKmjL455rPho5oDJVl4B/AicJKcy0jTB9RkZmJwT50Z9iE3pVf4IznBP/wOTa3zaov16Bm9+C5BE90eVA==}
     peerDependencies:
       '@fesjs/fes': ^2.0.0
       '@fesjs/fes-design': ^0.1.10
       vue: ^3.0.5
     dependencies:
-      '@fesjs/fes': 2.0.15_7b608312ed76c9b098ceb195811a5dc7
+      '@fesjs/fes': 2.0.16_7b608312ed76c9b098ceb195811a5dc7
       '@fesjs/fes-design': 0.1.10_vue@3.2.26
       '@fesjs/utils': 2.0.3
       vue: 3.2.26
@@ -1546,12 +1546,12 @@ packages:
       - supports-color
     dev: false
 
-  /@fesjs/plugin-sass/2.0.0_@fesjs+fes@2.0.15+webpack@5.65.0:
+  /@fesjs/plugin-sass/2.0.0_@fesjs+fes@2.0.16+webpack@5.65.0:
     resolution: {integrity: sha512-c8bAuzQMK0GKFLuqO0hRUV0yoDzPqY/mM3s8ZykKjejqjDj1yIMjiNz6nDZzeqlD1FpZOQBvkjepKyhAyyHr/Q==}
     peerDependencies:
       '@fesjs/fes': ^2.0.0
     dependencies:
-      '@fesjs/fes': 2.0.15_7b608312ed76c9b098ceb195811a5dc7
+      '@fesjs/fes': 2.0.16_7b608312ed76c9b098ceb195811a5dc7
       sass: 1.46.0
       sass-loader: 11.1.1_sass@1.46.0+webpack@5.65.0
     transitivePeerDependencies:
@@ -1560,8 +1560,8 @@ packages:
       - webpack
     dev: true
 
-  /@fesjs/preset-built-in/2.0.14_@vue+compiler-sfc@3.2.26:
-    resolution: {integrity: sha512-NX0kw2uHxSTbjkQvmaTe5yYNe757I4FcOfEZItu6/wlCSkYrMrlCKsN1lhL4aZIgU6bCWm3HYoIUjE3HhbrOEw==}
+  /@fesjs/preset-built-in/2.0.16_@vue+compiler-sfc@3.2.26:
+    resolution: {integrity: sha512-F/ZubkuSZqa9Slmx1JMURjlE71uFPfhWIlubH97ZmY/2nLyp5dQFgtMaw5GdU6xNfuzgqS6KySdXzOSve0VXKA==}
     peerDependencies:
       '@vue/compiler-sfc': ^3.0.5
     dependencies:
@@ -5476,8 +5476,8 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /lint-staged/12.1.5:
-    resolution: {integrity: sha512-WyKb+0sNKDTd1LwwAfTBPp0XmdaKkAOEbg4oHE4Kq2+oQVchg/VAcjVQtSqZih1izNsTURjc2EkhG/syRQUXdA==}
+  /lint-staged/12.1.7:
+    resolution: {integrity: sha512-bltv/ejiLWtowExpjU+s5z8j1Byjg9AlmaAjMmqNbIicY69u6sYIwXGg0dCn0TlkrrY2CphtHIXAkbZ+1VoWQQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
