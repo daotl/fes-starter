@@ -14,7 +14,7 @@ const store = useUserStore()
 const name = store.name
 </script>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 .right {
   padding: 0 20px;
   text-align: right;
