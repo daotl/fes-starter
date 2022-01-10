@@ -6,6 +6,7 @@ import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import IconsPlugin from 'unplugin-icons/webpack'
 import IconsResolver from 'unplugin-icons/resolver'
+import ElementPlusPlugin from 'unplugin-element-plus/webpack'
 
 export default {
   publicPath: './',
@@ -84,6 +85,8 @@ export default {
     config.externals({
       'element-plus/es/components/loading-directive/style/css': 'undefined',
     })
+
+    config.plugin('element-plus').use(ElementPlusPlugin())
 
     config.plugin('icons').use(
       IconsPlugin({
