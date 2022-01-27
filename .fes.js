@@ -1,12 +1,14 @@
+/* eslint-disable import/no-unresolved */
+
 // .fes.js 只负责管理编译时配置，只能使用plain Object
 import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
-import VueComponentsPlugin from 'unplugin-vue-components/webpack'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import IconsPlugin from 'unplugin-icons/webpack'
-import IconsResolver from 'unplugin-icons/resolver'
 import ElementPlusPlugin from 'unplugin-element-plus/webpack'
+import IconsResolver from 'unplugin-icons/resolver'
+import IconsPlugin from 'unplugin-icons/webpack'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 
 export default {
   publicPath: './',

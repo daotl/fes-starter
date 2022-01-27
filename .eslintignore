@@ -1,3 +1,5 @@
+!.fes.js
+!.stylelintrc.js
 node_modules
 dist
 public

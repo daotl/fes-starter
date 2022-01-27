@@ -22,8 +22,6 @@
     "**/*.js",
     "**/*.ts",
     "**/*.vue",
-    ".eslintrc.js",
-    ".stylelintrc.js"
   ],
   "exclude": [
     "node_modules",
