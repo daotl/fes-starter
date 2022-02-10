@@ -57,6 +57,7 @@
     "@daotl/tsconfig": "^0.0.4",
     "@fesjs/plugin-sass": "^2.0.0",
     "@iconify-json/mdi": "^1.0.17",
+    "@types/node": "^17.0.17",
     "@vue/compiler-sfc": "^3.2.30",
     "core-js": "^3.21.0",
     "cross-env": "^7.0.3",
