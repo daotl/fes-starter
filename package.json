@@ -45,7 +45,7 @@
     "@fesjs/plugin-enums": "^2.0.2",
     "@fesjs/plugin-layout": "^4.0.4",
     "core-js": "^3.21.0",
-    "element-plus": "^1.3.0-beta.10",
+    "element-plus": "^2.0.1",
     "vue": "^3.2.30",
     "vue-router": "^4.0.12"
   },

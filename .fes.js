@@ -41,6 +41,12 @@ export default {
     ],
   },
   chainWebpack(config) {
+    // Needed for Element Plus 2.x, see: https://github.com/element-plus/element-plus/discussions/5657
+    config.module
+      .rule('element-plus')
+      .test(/\.mjs$/i)
+      .resolve.set('byDependency', { esm: { fullySpecified: false } })
+
     config.plugin('eslint').use(ESLintPlugin, [
       {
         files: 'src/**/*.{js,ts,tsx,vue}',
