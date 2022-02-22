@@ -4,9 +4,21 @@ module.exports = {
   ignoreFiles: 'src/{.fes,.fes-production}/**/*',
   extends: commonExtends,
   rules: {
-    'order/properties-alphabetical-order': null,
     'color-named': 'always-where-possible',
+    'order/properties-alphabetical-order': null,
+    'property-no-unknown': [
+      true,
+      {
+        ignoreSelectors: [':export'],
+      },
+    ],
     'selector-max-id': 1,
+    'selector-pseudo-element-no-unknown': [
+      true,
+      {
+        ignorePseudoElements: ['export'],
+      },
+    ],
   },
   overrides: [
     {
@@ -20,6 +32,12 @@ module.exports = {
     {
       files: 'src/**/*.vue',
       extends: ['stylelint-config-recommended-vue/scss', ...commonExtends],
+      'selector-pseudo-element-no-unknown': [
+        true,
+        {
+          ignorePseudoElements: ['deep', 'v-deep'],
+        },
+      ],
     },
   ],
 }
