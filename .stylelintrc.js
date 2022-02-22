@@ -16,7 +16,12 @@ module.exports = {
     'selector-pseudo-element-no-unknown': [
       true,
       {
-        ignorePseudoElements: ['export'],
+        ignorePseudoElements: [
+          'export',
+          // For Vue deep selector: `:deep`
+          // See: https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
+          'deep',
+        ],
       },
     ],
   },
@@ -32,12 +37,6 @@ module.exports = {
     {
       files: 'src/**/*.vue',
       extends: ['stylelint-config-recommended-vue/scss', ...commonExtends],
-      'selector-pseudo-element-no-unknown': [
-        true,
-        {
-          ignorePseudoElements: ['deep', 'v-deep'],
-        },
-      ],
     },
   ],
 }
