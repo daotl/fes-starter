@@ -1,8 +1,6 @@
 <template>
   <div class="right">
-    <i-mdi-account-box
-      style="color: red; font-size: 2em; vertical-align: middle"
-    />
+    <div i-mdi-account-box inline-block align-middle color-red></div>
     <span>{{ name }}</span>
   </div>
 </template>

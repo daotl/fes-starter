@@ -1,3 +1,7 @@
+// eslint-disable-next-line import/no-unresolved
+import 'uno.css'
+import '@unocss/reset/tailwind.css'
+
 import { access } from '@fesjs/fes'
 import { createPinia } from 'pinia'
 import type { App } from 'vue'

@@ -1,12 +1,11 @@
 /* eslint-disable import/no-unresolved */
 
 // .fes.js 只负责管理编译时配置，只能使用plain Object
+import UnocssPlugin from '@unocss/webpack'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
 import ElementPlusPlugin from 'unplugin-element-plus/webpack'
-import IconsResolver from 'unplugin-icons/resolver'
-import IconsPlugin from 'unplugin-icons/webpack'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 
@@ -85,7 +84,7 @@ export default {
           /src\/.+\.vue$/,
           /src\/.+\.vue\?vue/, // .vue
         ],
-        resolvers: [ElementPlusResolver(), IconsResolver()],
+        resolvers: [ElementPlusResolver()],
       }),
     )
     // Temporary workaround for Element Plus + unplugin-vue-components bug when importing `v-loading`
@@ -96,11 +95,6 @@ export default {
 
     config.plugin('element-plus').use(ElementPlusPlugin())
 
-    config.plugin('icons').use(
-      IconsPlugin({
-        compiler: 'vue3',
-        autoInstall: true, // expiremental
-      }),
-    )
+    config.plugin('unocss').use(UnocssPlugin())
   },
 }
