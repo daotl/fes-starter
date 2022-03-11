@@ -48,5 +48,10 @@ module.exports = {
         'scss/at-import-partial-extension': null,
       },
     },
+    {
+      files: 'src/**/*.tsx',
+      customSyntax: '@stylelint/postcss-css-in-js',
+      extends: ['stylelint-config-recommended-scss', ...commonExtends],
+    },
   ],
 }
