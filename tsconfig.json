@@ -4,18 +4,14 @@
     "outDir": "build/dist",
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ],
-      "@@/*": [
-        "src/.fes/*"
-      ]
+      "~/*": ["src/*"],
+      "@@/*": ["src/.fes/*", "./src/.fes-production/*"],
     },
     "types": [
       "node",
       "jest",
       "element-plus/global",
-      "unplugin-icons/types/vue"
+      "unplugin-icons/types/vue",
     ]
   },
   "include": [
@@ -28,6 +24,6 @@
     "build",
     "dist",
     "src/.fes/*",
-    "src/.fes-production/*"
-  ]
+    "src/.fes-production/*",
+  ],
 }
