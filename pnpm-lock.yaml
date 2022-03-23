@@ -39,6 +39,7 @@ specifiers:
   prism-theme-vars: ^0.2.2
   stylelint: ^14.6.0
   stylelint-config-property-sort-order-smacss: ^9.0.0
+  stylelint-config-recommended: ^7.0.0
   stylelint-config-recommended-scss: ^6.0.0
   stylelint-config-recommended-vue: ^1.4.0
   stylelint-webpack-plugin: ^3.2.0
@@ -94,6 +95,7 @@ devDependencies:
   prettier: 2.6.0
   stylelint: 14.6.0
   stylelint-config-property-sort-order-smacss: 9.0.0_stylelint@14.6.0
+  stylelint-config-recommended: 7.0.0_stylelint@14.6.0
   stylelint-config-recommended-scss: 6.0.0_postcss@8.4.12+stylelint@14.6.0
   stylelint-config-recommended-vue: 1.4.0_f552817e5b8b1b7dca381d844218922e
   stylelint-webpack-plugin: 3.2.0_stylelint@14.6.0+webpack@5.70.0
@@ -8606,15 +8608,7 @@ packages:
       semver: 7.3.5
       stylelint: 14.6.0
       stylelint-config-html: 1.0.0_f552817e5b8b1b7dca381d844218922e
-      stylelint-config-recommended: 6.0.0_stylelint@14.6.0
-    dev: true
-
-  /stylelint-config-recommended/6.0.0_stylelint@14.6.0:
-    resolution: {integrity: sha512-ZorSSdyMcxWpROYUvLEMm0vSZud2uB7tX1hzBZwvVY9SV/uly4AvvJPPhCcymZL3fcQhEQG5AELmrxWqtmzacw==}
-    peerDependencies:
-      stylelint: ^14.0.0
-    dependencies:
-      stylelint: 14.6.0
+      stylelint-config-recommended: 7.0.0_stylelint@14.6.0
     dev: true
 
   /stylelint-config-recommended/7.0.0_stylelint@14.6.0:
