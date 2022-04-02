@@ -11,6 +11,7 @@ specifiers:
   '@fesjs/plugin-access': ^2.0.5
   '@fesjs/plugin-enums': ^2.0.2
   '@fesjs/plugin-layout': ^4.0.7
+  '@fesjs/plugin-pinia': ^2.0.2
   '@fesjs/plugin-sass': ^2.0.0
   '@iconify-json/mdi': ^1.1.7
   '@stylelint/postcss-css-in-js': ^0.37.2
@@ -58,6 +59,7 @@ dependencies:
   '@fesjs/plugin-access': 2.0.5_@fesjs+fes@2.0.22+vue@3.2.31
   '@fesjs/plugin-enums': 2.0.2_@fesjs+fes@2.0.22+vue@3.2.31
   '@fesjs/plugin-layout': 4.0.7_8a43c664611aaa84e85416a76db41071
+  '@fesjs/plugin-pinia': 2.0.2_e6acd2b96763fb854ab584b0d16cbddb
   core-js: 3.21.1
   element-plus: 2.1.7_1a412d14def5ff5ca1122000e4bee666
   prism-theme-vars: 0.2.2
@@ -1572,6 +1574,21 @@ packages:
       '@fesjs/fes': 2.0.22_4f726de02e89ff745196f225ebb1bbcf
       '@fesjs/fes-design': 0.4.0_vue@3.2.31
       '@fesjs/utils': 2.0.4
+      vue: 3.2.31
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@fesjs/plugin-pinia/2.0.2_e6acd2b96763fb854ab584b0d16cbddb:
+    resolution: {integrity: sha512-lSDcVL1SsC0J1REtrM2oSfUubfBvieOTC08Lppivk+mOBrGU9Ai0Abx6ywOYN/jsKJUhg70yfqurcltOXa0yww==}
+    peerDependencies:
+      '@fesjs/fes': ^2.0.0
+      pinia: ^2.0.11
+      vue: ^3.0.5
+    dependencies:
+      '@fesjs/fes': 2.0.22_4f726de02e89ff745196f225ebb1bbcf
+      '@fesjs/utils': 2.0.4
+      pinia: 2.0.13_typescript@4.6.3+vue@3.2.31
       vue: 3.2.31
     transitivePeerDependencies:
       - supports-color

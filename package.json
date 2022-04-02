@@ -44,6 +44,7 @@
     "@fesjs/plugin-access": "^2.0.5",
     "@fesjs/plugin-enums": "^2.0.2",
     "@fesjs/plugin-layout": "^4.0.7",
+    "@fesjs/plugin-pinia": "^2.0.2",
     "core-js": "^3.21.1",
     "element-plus": "^2.1.7",
     "prism-theme-vars": "^0.2.2",

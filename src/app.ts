@@ -2,27 +2,29 @@
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
 
-import { access } from '@fesjs/fes'
-import { createPinia } from 'pinia'
+import { access /*, pinia*/ } from '@fesjs/fes'
 import type { App } from 'vue'
 
 import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'
+import { ENABLED_PAGE_PATHS } from '~/config/page'
 
 export function onAppCreated({ app }: { app: App }) {
-  const pinia = createPinia()
-  app.use(pinia)
+  // pinia.use(somePiniaPlugin())
+  // app.use(someVuePlugin())
 }
 
 export const beforeRender = {
   loading: PageLoading,
   action() {
-    const { setRole } = access
+    const { setAccess /*, *setRole*/ } = access
     return new Promise((resolve) => {
-      setTimeout(() => {
-        void setRole('admin')
-        resolve({})
-      }, 1000)
+      // Access data can be requested from backend / read from HTML meta tags etc.
+      // setTimeout(() => {
+      void setAccess(ENABLED_PAGE_PATHS)
+      // void setRole('admin')
+      resolve({})
+      // }, 1000)
     })
   },
 }
