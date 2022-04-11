@@ -18,12 +18,13 @@
     "**/*.js",
     "**/*.ts",
     "**/*.vue",
+    "**/*.tsx",
   ],
   "exclude": [
     "node_modules",
     "build",
     "dist",
-    "src/.fes/*",
-    "src/.fes-production/*",
+    "src/.fes",
+    "src/.fes-production",
   ],
 }

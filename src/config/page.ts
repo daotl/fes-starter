@@ -7,7 +7,7 @@ export type Page = {
   name: string
 
   // 菜单的路径，可配置第三方地址。
-  path: string
+  path?: string
 
   // 额外匹配的路径，当前路由命中匹配规则时，此菜单高亮。
   match?: string[]
@@ -17,22 +17,23 @@ export type Page = {
 
   // 菜单的图标，只有一级标题展示图标。
   icon?: string
+
+  // 子菜单列表
+  children?: Page[]
 }
 
 const _: Page[] = PAGES
 
-const PAGE_MAP = PAGES.reduce<Record<string, Page>>(
-  (map, page) => ({
-    ...map,
-    [page.name]: page,
-  }),
-  {} as const,
-)
+const PAGE_MAP = flatMapPages(PAGES)
 
-const ENABLED_PAGES = loader
-  .getConfigValue('ENABLED_PAGES')
+const ENABLED_PAGES = (loader.getConfigValue('ENABLED_PAGES') || '')
   .split(',')
   .map((s) => s.trim())
+
+// `index` should always be included
+if (!ENABLED_PAGES.includes('index')) {
+  ENABLED_PAGES.push('index')
+}
 
 let enabledPagePaths = ENABLED_PAGES.map((name) => PAGE_MAP[name]?.path).filter(
   (path) => path !== undefined,
@@ -44,3 +45,19 @@ if (enabledPagePaths.length === 0) {
 }
 
 export const ENABLED_PAGE_PATHS = enabledPagePaths
+
+function flatMapPages(pages: Page[]): Record<string, Page> {
+  return pages.reduce<Record<string, Page>>((map, page) => {
+    let newMap = {
+      ...map,
+      [page.name]: page,
+    } as const
+    if (page.children?.length) {
+      newMap = {
+        ...newMap,
+        ...flatMapPages(page.children),
+      }
+    }
+    return newMap
+  }, {} as const)
+}

@@ -3,11 +3,13 @@ import 'uno.css'
 import '@unocss/reset/tailwind.css'
 
 import { access /*, pinia*/ } from '@fesjs/fes'
-import type { App } from 'vue'
+// import { ElConfigProvider, ElLoading } from 'element-plus'
+// import elementZhCn from 'element-plus/es/locale/lang/zh-cn'
+import type { App, ComponentOptions } from 'vue'
 
 import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'
-import { ENABLED_PAGE_PATHS } from '~/config/page'
+import { CONFIG } from '~/config'
 
 export function onAppCreated({ app }: { app: App }) {
   // pinia.use(somePiniaPlugin())
@@ -21,12 +23,22 @@ export const beforeRender = {
     return new Promise((resolve) => {
       // Access data can be requested from backend / read from HTML meta tags etc.
       // setTimeout(() => {
-      void setAccess(ENABLED_PAGE_PATHS)
+      void setAccess(CONFIG.enabledPagePaths)
       // void setRole('admin')
       resolve({})
       // }, 1000)
     })
   },
+}
+
+export function rootContainer(container: ComponentOptions) {
+  return () => {
+    return (
+      // <ElConfigProvider locale={elementZhCn}>
+      <container></container>
+      // </ElConfigProvider>
+    )
+  }
 }
 
 export const layout = {
