@@ -24,29 +24,41 @@ export type Page = {
 
 const _: Page[] = PAGES
 
-const PAGE_MAP = flatMapPages(PAGES)
-
-const ENABLED_PAGES = (loader.getConfigValue('ENABLED_PAGES') || '')
+const enabledPageNames = (loader.getConfigValue('ENABLED_PAGES') || '')
   .split(',')
   .map((s) => s.trim())
 
 // `index` should always be included
-if (!ENABLED_PAGES.includes('index')) {
-  ENABLED_PAGES.push('index')
+if (!enabledPageNames.includes('index')) {
+  enabledPageNames.push('index')
 }
 
-let enabledPagePaths = ENABLED_PAGES.map((name) => PAGE_MAP[name]?.path).filter(
-  (path) => path !== undefined,
-)
+let enabledPages = flattenEnabledPages(PAGES, enabledPageNames)
 
 // If not set, enabled all pages
-if (enabledPagePaths.length === 0) {
-  enabledPagePaths = PAGES.map((page) => page.path)
+if (enabledPages.length === 0) {
+  enabledPages = flattenPages(PAGES)
 }
 
-export const ENABLED_PAGE_PATHS = enabledPagePaths
+export const enabledPagePaths = enabledPages
+  .map((p) => p.path)
+  .filter((path) => path)
 
-function flatMapPages(pages: Page[]): Record<string, Page> {
+/* Util functions */
+
+function flattenEnabledPages(pages: Page[], names: string[]): Page[] {
+  return pages.flatMap((p) =>
+    names.includes(p.name)
+      ? [p, ...flattenPages(p.children || [])]
+      : flattenEnabledPages(p.children || [], names),
+  )
+}
+
+function flattenPages(pages: Page[]): Page[] {
+  return pages.flatMap((p) => [p, ...flattenPages(p.children || [])])
+}
+
+function flattenPagesToMap(pages: Page[]): Record<string, Page> {
   return pages.reduce<Record<string, Page>>((map, page) => {
     let newMap = {
       ...map,
@@ -55,7 +67,7 @@ function flatMapPages(pages: Page[]): Record<string, Page> {
     if (page.children?.length) {
       newMap = {
         ...newMap,
-        ...flatMapPages(page.children),
+        ...flattenPagesToMap(page.children),
       }
     }
     return newMap
