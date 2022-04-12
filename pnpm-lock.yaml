@@ -9,7 +9,6 @@ specifiers:
   '@fesjs/fes': ^2.0.22
   '@fesjs/fes-design': ^0.4.2
   '@fesjs/plugin-access': ^2.0.5
-  '@fesjs/plugin-enums': ^2.0.2
   '@fesjs/plugin-layout': ^4.0.7
   '@fesjs/plugin-pinia': ^2.0.2
   '@fesjs/plugin-sass': ^2.0.0
@@ -57,11 +56,11 @@ dependencies:
   '@fesjs/fes': 2.0.22_4f726de02e89ff745196f225ebb1bbcf
   '@fesjs/fes-design': 0.4.2_vue@3.2.31
   '@fesjs/plugin-access': 2.0.5_@fesjs+fes@2.0.22+vue@3.2.31
-  '@fesjs/plugin-enums': 2.0.2_@fesjs+fes@2.0.22+vue@3.2.31
   '@fesjs/plugin-layout': 4.0.7_f20d06afd16c9026989e5240ff20bf92
   '@fesjs/plugin-pinia': 2.0.2_e6acd2b96763fb854ab584b0d16cbddb
   core-js: 3.21.1
   element-plus: 2.1.8_1a412d14def5ff5ca1122000e4bee666
+  pinia: 2.0.13_typescript@4.6.3+vue@3.2.31
   prism-theme-vars: 0.2.2
   vue: 3.2.31
   vue-router: 4.0.14_vue@3.2.31
@@ -89,7 +88,6 @@ devDependencies:
   eslint-webpack-plugin: 3.1.1_eslint@8.13.0+webpack@5.72.0
   husky: 7.0.4
   lint-staged: 12.3.7
-  pinia: 2.0.13_typescript@4.6.3+vue@3.2.31
   pnpm: 6.32.6
   postcss: 8.4.12
   postcss-html: 1.3.0
@@ -1595,16 +1593,6 @@ packages:
       - supports-color
     dev: false
 
-  /@fesjs/plugin-enums/2.0.2_@fesjs+fes@2.0.22+vue@3.2.31:
-    resolution: {integrity: sha512-rqwUUJmFcM9IxCcFIRJArriB+znXGGHkJhQbp6H4n48l6mnvwoJ0ChXOPlF5Bp9R7Qtv9tn/0U0PJ0c0YZCaZA==}
-    peerDependencies:
-      '@fesjs/fes': ^2.0.0
-      vue: ^3.0.5
-    dependencies:
-      '@fesjs/fes': 2.0.22_4f726de02e89ff745196f225ebb1bbcf
-      vue: 3.2.31
-    dev: false
-
   /@fesjs/plugin-layout/4.0.7_f20d06afd16c9026989e5240ff20bf92:
     resolution: {integrity: sha512-5Etvp1h29NMecWHNbOXQgMPc9u7UT+MbBOSOSmWqRiEW8BfAs4gcvJ58Mzq5ph1/a9gFXvKvCYYVGEk+gL+gjA==}
     peerDependencies:
@@ -2437,7 +2425,7 @@ packages:
 
   /@vue/devtools-api/6.1.4:
     resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
-    dev: true
+    dev: false
 
   /@vue/eslint-config-typescript/10.0.0_bce4b83fa884e24c7c51958268b6ce2c:
     resolution: {integrity: sha512-F94cL8ug3FaYXlCfU5/wiGjk1qeadmoBpRGAOBq+qre3Smdupa59dd6ZJrsfRODpsMPyTG7330juMDsUvpZ3Rw==}
@@ -6872,7 +6860,7 @@ packages:
       typescript: 4.6.3
       vue: 3.2.31
       vue-demi: 0.12.1_vue@3.2.31
-    dev: true
+    dev: false
 
   /pinkie-promise/2.0.1:
     resolution: {integrity: sha1-ITXW36ejWMBprJsXh3YogihFD/o=}
@@ -9204,6 +9192,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.31
+    dev: false
 
   /vue-eslint-parser/8.0.1_eslint@8.13.0:
     resolution: {integrity: sha512-lhWjDXJhe3UZw2uu3ztX51SJAPGPey1Tff2RK3TyZURwbuI4vximQLzz4nQfCv8CZq4xx7uIiogHMMoSJPr33A==}
