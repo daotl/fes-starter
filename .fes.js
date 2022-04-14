@@ -9,7 +9,7 @@ import ElementPlusPlugin from 'unplugin-element-plus/webpack'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 
-import PAGES from './src/config/pages'
+import { MENUS } from './src/config/pages'
 
 export default {
   publicPath: './',
@@ -26,16 +26,10 @@ export default {
     title: 'Fes.js',
     footer: 'Created by MumbleFE',
     multiTabs: false,
-    menus: PAGES,
+    menus: MENUS,
   },
   devServer: {
     port: 8000,
-  },
-  enums: {
-    status: [
-      ['0', '无效的'],
-      ['1', '有效的'],
-    ],
   },
   chainWebpack(config) {
     // Needed for Element Plus 2.x, see: https://github.com/element-plus/element-plus/discussions/5657

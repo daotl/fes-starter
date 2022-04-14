@@ -1,5 +1,5 @@
 import loader from './loader'
-import PAGES from './pages'
+import { PAGES } from './pages'
 
 export type Page = {
   // 菜单的名称。通过匹配 name 和路由元信息 meta 中的 name，把菜单和路由关联起来，
@@ -11,6 +11,9 @@ export type Page = {
 
   // 额外匹配的路径，当前路由命中匹配规则时，此菜单高亮。
   match?: string[]
+
+  // 是否在侧边栏菜单显示，若不传默认为true
+  sidebar?: boolean
 
   // 菜单的标题，如果同时使用国际化插件，而且title的值以$开头，则使用$后面的内容去匹配语言设置。
   title?: string
@@ -24,20 +27,20 @@ export type Page = {
 
 const _: Page[] = PAGES
 
-const enabledPageNames = (loader.getConfigValue('ENABLED_PAGES') || '')
-  .split(',')
-  .map((s) => s.trim())
+const enabledPageNamesStr = loader.getConfigValue('ENABLED_PAGES')?.trim()
 
-// `index` should always be included
-if (!enabledPageNames.includes('index')) {
-  enabledPageNames.push('index')
-}
-
-let enabledPages = flattenEnabledPages(PAGES, enabledPageNames)
+let enabledPages: Page[]
 
 // If not set, enabled all pages
-if (enabledPages.length === 0) {
+if (!enabledPageNamesStr) {
   enabledPages = flattenPages(PAGES)
+} else {
+  const enabledPageNames = enabledPageNamesStr.split(',').map((s) => s.trim())
+  // `index` should always be included
+  if (!enabledPageNames.includes('index')) {
+    enabledPageNames.push('index')
+  }
+  enabledPages = flattenEnabledPages(PAGES, enabledPageNames)
 }
 
 export const enabledPagePaths = enabledPages
@@ -58,6 +61,7 @@ function flattenPages(pages: Page[]): Page[] {
   return pages.flatMap((p) => [p, ...flattenPages(p.children || [])])
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function flattenPagesToMap(pages: Page[]): Record<string, Page> {
   return pages.reduce<Record<string, Page>>((map, page) => {
     let newMap = {
@@ -67,6 +71,7 @@ function flattenPagesToMap(pages: Page[]): Record<string, Page> {
     if (page.children?.length) {
       newMap = {
         ...newMap,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         ...flattenPagesToMap(page.children),
       }
     }
