@@ -10,6 +10,6 @@ INDEX_HTML=$1
 env | while IFS='=' read -r name value ; do
   if [[ $name == 'APP_'* ]]; then
     echo "Set: $name" = ${!name}
-    sed -ri "s/(<meta name=\"${name//\//\\/}\").*\/>/\1 content=\"${!name//\//\\/}\"\/>/" $INDEX_HTML
+    sed -ri "s/(<meta name=\"${name//\//\\/}\").*\/?>/\1 content=\"${!name//\//\\/}\"\/>/" $INDEX_HTML
   fi
 done
