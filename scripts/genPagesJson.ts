@@ -3,7 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import PAGES from '~/config/pages'
+import { PAGES } from '~/config/pages'
 
 fs.writeFileSync(
   path.resolve(__dirname, 'pages.json'),
