@@ -58,7 +58,6 @@ dependencies:
   '@fesjs/plugin-access': 2.0.5_@fesjs+fes@2.0.23+vue@3.2.33
   '@fesjs/plugin-layout': 4.0.8_2860e06df9a9165a4b5d77388a9db25f
   '@fesjs/plugin-pinia': 2.0.2_7ab77dd47e093db2078eeda0b053949c
-  core-js: 3.22.0
   element-plus: 2.1.9_vue@3.2.33
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.33
   prism-theme-vars: 0.2.2
@@ -83,6 +82,7 @@ devDependencies:
   '@unocss/reset': 0.31.3
   '@unocss/webpack': 0.31.3_webpack@5.72.0
   '@vue/compiler-sfc': 3.2.33
+  core-js: 3.22.0
   cross-env: 7.0.3
   eslint: 8.13.0
   eslint-webpack-plugin: 3.1.1_eslint@8.13.0+webpack@5.72.0
@@ -3549,7 +3549,6 @@ packages:
   /core-js/3.22.0:
     resolution: {integrity: sha512-8h9jBweRjMiY+ORO7bdWSeWfHhLPO7whobj7Z2Bl0IDo00C228EdGgH7FE4jGumbEjzcFfkfW8bXgdkEDhnwHQ==}
     requiresBuild: true
-    dev: false
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
