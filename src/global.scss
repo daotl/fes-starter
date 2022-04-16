@@ -1,8 +1,9 @@
 // Global style
-@import './styles/markdown';
 
-//// element-plus/theme-chalk
-@import './styles/element/index';
+@import '@unocss/reset/tailwind.css';
+// Element Plus
+@import './styles/element-plus/index';
+@import './styles/markdown';
 
 body {
   margin:0;
