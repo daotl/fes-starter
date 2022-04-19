@@ -9,8 +9,6 @@ import ElementPlusPlugin from 'unplugin-element-plus/webpack'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueComponentsPlugin from 'unplugin-vue-components/webpack'
 
-import { MENUS } from './src/config/pages'
-
 export default {
   publicPath: './',
   alias: {
@@ -26,7 +24,6 @@ export default {
     title: 'Fes.js',
     footer: 'Created by MumbleFE',
     multiTabs: false,
-    menus: MENUS,
   },
   devServer: {
     port: 8000,

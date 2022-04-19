@@ -20,8 +20,9 @@ Basic:
 - [Element Plus](https://element-plus.org/): component library
 - [Pinia](https://pinia.vuejs.org/): state management
 - [UnoCSS](https://github.com/unocss/unocss): atomic CSS library
+- [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
 
-`antd` branch:
+`antd` branch (not maintained):
 
 - [Ant Design Vue](https://www.antdv.com/): component library
 

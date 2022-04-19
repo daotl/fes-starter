@@ -9,6 +9,7 @@ import type { App, ComponentOptions } from 'vue'
 import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'
 import { CONFIG } from '~/config'
+import type { Page } from '~/config/pages'
 
 export function onAppCreated({ app }: { app: App }) {
   // pinia.use(somePiniaPlugin())
@@ -40,6 +41,18 @@ export function rootContainer(container: ComponentOptions) {
   }
 }
 
-export const layout = {
+export const layout = (layoutConfig: Record<string, unknown>) => ({
+  ...layoutConfig,
   customHeader: UserCenter,
-}
+  menus: (_defaultMenuData: Page[]) => {
+    // We are not using default values from `.fes.js`
+    // const menusRef = ref(defaultMenuData)
+    const menusRef = ref(CONFIG.menus)
+
+    // If need to change dynamically:
+    // watch(() => layoutConfig.initialState.userName, () => {
+    //     menusRef.value = CONFIG.menus
+    // })
+    return menusRef
+  },
+})
