@@ -1,4 +1,4 @@
-import { VNode } from 'vue'
+import type { VNode } from 'vue'
 
 export type Page = {
   // 菜单的名称。通过匹配 name 和路由元信息 meta 中的 name，把菜单和路由关联起来，
