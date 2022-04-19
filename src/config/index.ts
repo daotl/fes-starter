@@ -1,6 +1,5 @@
-import { enabledPagePaths, menus } from '~/config/page'
-
 import loader from './loader'
+import { enabledPagePaths, menus } from './page'
 
 export const CONFIG = {
   menus: menus,
