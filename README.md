@@ -17,10 +17,13 @@ Basic:
 
 `master` branch:
 
+(Temporally dsiabled UnoCSS until [@unocss/webpack bug](https://github.com/unocss/unocss/issues/797) fixed)
+
 - [Element Plus](https://element-plus.org/): component library
 - [Pinia](https://pinia.vuejs.org/): state management
-- [UnoCSS](https://github.com/unocss/unocss): atomic CSS library
-- [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
+- ~~[UnoCSS](https://github.com/unocss/unocss): atomic CSS library~~
+- ~~[Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)~~
+- [xicons](https://github.com/07akioni/xicons) (Temporally using this until [@unocss/webpack bug](https://github.com/unocss/unocss/issues/797) fixed)
 
 `antd` branch (not maintained):
 

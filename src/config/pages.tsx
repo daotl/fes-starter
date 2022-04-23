@@ -1,3 +1,5 @@
+import { HomeFilled } from '@vicons/material'
+import { Icon } from '@vicons/utils'
 import type { VNode } from 'vue'
 
 export type Page = {
@@ -36,6 +38,11 @@ export const PAGES: Page[] = [
     // 首页
     name: 'home',
     path: '/home',
-    icon: <div class="i-mdi-home" />,
+    // icon: <div class="i-mdi-home" />,
+    icon: (
+      <Icon size="20">
+        <HomeFilled />
+      </Icon>
+    ),
   },
 ]

@@ -1,5 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
-import 'uno.css'
+// Temp: Disable UnoCSS until @unocss/webpack bug fixed:
+// https://github.com/unocss/unocss/issues/797
+// import 'uno.css'
 
 import { access /*, pinia*/ } from '@fesjs/fes'
 // import { ElConfigProvider, ElLoading } from 'element-plus'

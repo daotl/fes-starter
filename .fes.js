@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 
 // .fes.js 只负责管理编译时配置，只能使用plain Object
-import UnocssPlugin from '@unocss/webpack'
+// import UnocssPlugin from '@unocss/webpack'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import AutoImportPlugin from 'unplugin-auto-import/webpack'
@@ -84,6 +84,8 @@ export default {
 
     config.plugin('element-plus').use(ElementPlusPlugin())
 
-    config.plugin('unocss').use(UnocssPlugin())
+    // Temp: Disable UnoCSS until @unocss/webpack bug fixed:
+    // https://github.com/unocss/unocss/issues/797
+    // config.plugin('unocss').use(UnocssPlugin())
   },
 }
