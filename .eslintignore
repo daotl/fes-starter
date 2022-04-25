@@ -5,3 +5,5 @@ dist
 public
 src/types/auto-imports.d.ts
 src/types/components.d.ts
+src/.fes
+src/.fes-production
