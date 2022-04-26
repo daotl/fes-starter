@@ -12,6 +12,7 @@ import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'
 import { CONFIG } from '~/config'
 import type { Page } from '~/config/pages'
+import { logger } from '~/utils/log'
 
 export function onAppCreated({ app }: { app: App }) {
   // pinia.use(somePiniaPlugin())
@@ -26,6 +27,7 @@ export const beforeRender = {
       // Access data can be requested from backend / read from HTML meta tags etc.
       // setTimeout(() => {
       void setAccess(CONFIG.enabledPagePaths)
+      logger.log('access set')
       // void setRole('admin')
       resolve({})
       // }, 1000)

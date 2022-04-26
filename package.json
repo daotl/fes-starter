@@ -7,7 +7,7 @@
     "build": "cross-env RM_TMPDIR=none fes build",
     "prod": "cross-env FES_ENV=prod RM_TMPDIR=none fes build",
     "analyze": "cross-env ANALYZE=1 fes build",
-    "dev": "fes dev",
+    "dev": "cross-env FES_APP_DEBUG=true fes dev",
     "test:unit": "fes test:unit",
     "lint": "npm run eslint && npm run stylelint",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
