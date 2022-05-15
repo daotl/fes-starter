@@ -1,8 +1,21 @@
 {
   "name": "@daotl/fes-starter",
   "version": "2.0.0",
-  "description": "A fes.js + TypeScript starter template",
   "private": true,
+  "description": "A fes.js + TypeScript starter template",
+  "keywords": [
+    "管理端",
+    "fes",
+    "fast",
+    "easy",
+    "strong"
+  ],
+  "license": "MIT",
+  "author": "Nex Zhu <hitnexup@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daotl/fes-starter.git"
+  },
   "scripts": {
     "build": "cross-env RM_TMPDIR=none fes build",
     "prod": "cross-env FES_ENV=prod RM_TMPDIR=none fes build",
@@ -11,26 +24,13 @@
     "test:unit": "fes test:unit",
     "lint": "npm run eslint && npm run stylelint",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
-    "eslint": "eslint '**/*.{js,ts,tsx,vue}'",
-    "eslint:fix": "eslint '**/*.{js,ts,tsx,vue}' --fix",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
     "stylelint": "stylelint 'src/**/*.{css,scss,vue,tsx}'",
     "stylelint:fix": "stylelint 'src/**/*.{css,scss,vue,tsx}' --fix",
     "prepare": "husky install"
   },
   "prettier": "@daotl/prettier-config",
-  "keywords": [
-    "管理端",
-    "fes",
-    "fast",
-    "easy",
-    "strong"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/daotl/fes-starter.git"
-  },
-  "author": "Nex Zhu <hitnexup@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/daotl/fes-starter/issues"
   },

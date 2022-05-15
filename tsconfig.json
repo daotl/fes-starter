@@ -5,19 +5,15 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
-      "@@/*": ["src/.fes/*", "src/.fes-production/*"],
+      "@@/*": ["src/.fes/*", "src/.fes-production/*"]
     },
-    "types": [
-      "node",
-      "jest",
-      "element-plus/global",
-    ]
+    "types": ["node", "jest", "element-plus/global"]
   },
   "exclude": [
     "node_modules",
     "build",
     "dist",
     "src/.fes",
-    "src/.fes-production",
-  ],
+    "src/.fes-production"
+  ]
 }

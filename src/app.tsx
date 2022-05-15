@@ -6,7 +6,7 @@
 import { access /* , pinia */ } from '@fesjs/fes'
 // import { ElConfigProvider, ElLoading } from 'element-plus'
 // import elementZhCn from 'element-plus/es/locale/lang/zh-cn'
-import type { App, ComponentOptions } from 'vue'
+import type { App, ComponentOptions, Ref } from 'vue'
 
 import PageLoading from '~/components/PageLoading.vue'
 import UserCenter from '~/components/UserCenter.vue'
@@ -14,14 +14,14 @@ import { CONFIG } from '~/config'
 import type { Page } from '~/config/pages'
 import { logger } from '~/utils/log'
 
-export function onAppCreated({ app }: { app: App }) {
+export function onAppCreated({ app: _app }: { app: App }): void {
   // pinia.use(somePiniaPlugin())
   // app.use(someVuePlugin())
 }
 
 export const beforeRender = {
   loading: PageLoading,
-  action() {
+  action(): Promise<Record<string, unknown>> {
     const { setAccess /* , *setRole */ } = access
     return new Promise((resolve) => {
       // Access data can be requested from backend / read from HTML meta tags etc.
@@ -35,8 +35,9 @@ export const beforeRender = {
   },
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function rootContainer(container: ComponentOptions) {
-  return () => {
+  return (): ComponentOptions => {
     return (
       // <ElConfigProvider locale={elementZhCn}>
       <container></container>
@@ -45,10 +46,12 @@ export function rootContainer(container: ComponentOptions) {
   }
 }
 
-export const layout = (layoutConfig: Record<string, unknown>) => ({
+export const layout = (
+  layoutConfig: Record<string, unknown>,
+): Record<string, unknown> => ({
   ...layoutConfig,
   customHeader: UserCenter,
-  menus: (_defaultMenuData: Page[]) => {
+  menus: (_defaultMenuData: Page[]): Ref<typeof CONFIG.menus> => {
     // We are not using default values from `.fes.js`
     // const menusRef = ref(defaultMenuData)
     const menusRef = ref(CONFIG.menus)

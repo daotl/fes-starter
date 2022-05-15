@@ -6,7 +6,7 @@
  * - check current web page meta tags
  * @param {string} key Configuration key name
  */
-function getConfigValue(key: string) {
+function getConfigValue(key: string): string | undefined {
   // get value from meta tag
   const value = getMetaValue(key)
   if (!value && process.env && process.env[`FES_APP_${key}`] !== undefined) {
@@ -19,8 +19,8 @@ function getConfigValue(key: string) {
 /**
  * Get value from HTML meta tag
  */
-function getMetaValue(key: string) {
-  let value = null
+function getMetaValue(key: string): string | undefined {
+  let value
   const node = document.querySelector(
     `meta[name=FES_APP_${key}]`,
   ) as HTMLMetaElement

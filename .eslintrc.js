@@ -12,5 +12,6 @@ module.exports = {
   ],
   rules: {
     'no-undef': 'off', // Turned off for `unplugin-auto-import`
+    'eslint-comments/no-unlimited-disable': 'off',
   },
 }

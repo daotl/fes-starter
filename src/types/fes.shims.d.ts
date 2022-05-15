@@ -1,6 +1,6 @@
 declare module '@fesjs/fes' {
   // eslint-disable-next-line import/named
-  import { Route, Router } from 'vue-router'
+  import type { Route, Router } from 'vue-router'
 
   // eslint-disable-next-line import/export
   export * from '@@/core/coreExports'
