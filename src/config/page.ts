@@ -1,5 +1,6 @@
 import loader from './loader'
-import { Page, PAGES } from './pages'
+import type { Page } from './pages'
+import { PAGES } from './pages'
 
 function filterMenus(pages: Page[]): Page[] {
   return pages

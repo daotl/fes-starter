@@ -13,12 +13,6 @@
       "element-plus/global",
     ]
   },
-  "include": [
-    "**/*.js",
-    "**/*.ts",
-    "**/*.vue",
-    "**/*.tsx",
-  ],
   "exclude": [
     "node_modules",
     "build",

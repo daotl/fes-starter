@@ -2,7 +2,7 @@ import { HomeFilled } from '@vicons/material'
 import { Icon } from '@vicons/utils'
 import type { VNode } from 'vue'
 
-export type Page = {
+export interface Page {
   // 菜单的名称。通过匹配 name 和路由元信息 meta 中的 name，把菜单和路由关联起来，
   // 然后使用路由元信息补充菜单配置，比如 title、path 等。
   name: string
