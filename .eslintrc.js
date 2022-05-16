@@ -2,9 +2,8 @@ module.exports = {
   root: true,
   extends: '@daotl/eslint-config-vue/typescript',
   overrides: [
-    // For TS
     {
-      files: '**/*.{ts,tsx,vue}',
+      files: '**/*.{ts,tsx,d.ts,vue}',
       parserOptions: {
         project: 'tsconfig.json',
       },

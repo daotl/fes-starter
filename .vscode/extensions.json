@@ -1,5 +1,8 @@
 {
   "recommendations": [
+    "antfu.iconify",
+    "antfu.goto-alias",
+    "antfu.unocss",
     "misterj.vue-volar-extention-pack",
     "christian-kohler.npm-intellisense",
     "csstools.postcss",
@@ -10,7 +13,6 @@
     "lokalise.i18n-ally",
     "oderwat.indent-rainbow",
     "shardulm94.trailing-spaces",
-    "antfu.iconify",
-    "antfu.unocss"
+    "streetsidesoftware.code-spell-checker"
   ]
 }
