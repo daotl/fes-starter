@@ -1,13 +1,11 @@
 /* eslint-disable import/no-unresolved */
 
 // .fes.js 只负责管理编译时配置，只能使用plain Object
-// import UnocssPlugin from '@unocss/webpack'
-import ESLintPlugin from 'eslint-webpack-plugin'
-import StylelintPlugin from 'stylelint-webpack-plugin'
-import AutoImportPlugin from 'unplugin-auto-import/webpack'
-import ElementPlusPlugin from 'unplugin-element-plus/webpack'
+import Unocss from '@unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import VueComponentsPlugin from 'unplugin-vue-components/webpack'
+import Components from 'unplugin-vue-components/vite'
 
 export default {
   publicPath: './',
@@ -25,67 +23,55 @@ export default {
     footer: 'Created by MumbleFE',
     multiTabs: false,
   },
-  devServer: {
-    port: 8000,
-  },
-  chainWebpack(config) {
-    // Needed for Element Plus 2.x, see: https://github.com/element-plus/element-plus/discussions/5657
-    config.module
-      .rule('element-plus')
-      .test(/\.mjs$/i)
-      .resolve.set('byDependency', { esm: { fullySpecified: false } })
-
-    config.plugin('eslint').use(ESLintPlugin, [
-      {
-        files: 'src/**/*.{js,ts,tsx,vue}',
-        fix: true,
-      },
-    ])
-    config.plugin('stylelint').use(StylelintPlugin, [
-      {
-        extensions: ['css', 'scss', 'vue', 'tsx'],
-        fix: true,
-      },
-    ])
-
-    config.plugin('auto-import').use(
-      AutoImportPlugin({
-        dts: './src/types/auto-imports.d.ts',
-        include: [
-          /src\/.+\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-          /src\/.+\.vue$/,
-          /src\/.+\.vue\?vue/, // .vue
-          /src\/.+\.md$/, // .md
-        ],
-        // global imports to register
+  viteOption: {
+    server: {
+      // Uncomment when running in a container
+      // host: '0.0.0.0',
+      port: 8000,
+    },
+    plugins: [
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
         imports: [
-          // presets
           'vue',
           'vue-router',
+          'vue-i18n',
+          'vue/macros',
+          '@vueuse/head',
+          '@vueuse/core',
         ],
+        // auto import Element Plus functions
         resolvers: [ElementPlusResolver()],
+        dts: 'src/types/auto-imports.d.ts',
       }),
-    )
-    config.plugin('vue-components').use(
-      VueComponentsPlugin({
-        dts: './src/types/components.d.ts',
-        include: [
-          /src\/.+\.vue$/,
-          /src\/.+\.vue\?vue/, // .vue
+
+      // https://github.com/antfu/unplugin-vue-components
+      Components({
+        // allow auto load markdown components under `./src/components/`
+        extensions: ['vue', 'md'],
+        // allow auto import and register components used in markdown
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        resolvers: [
+          ElementPlusResolver({
+            importStyle: 'sass',
+          }),
         ],
-        resolvers: [ElementPlusResolver()],
+        dts: 'src/types/components.d.ts',
       }),
-    )
-    // Temporary workaround for Element Plus + unplugin-vue-components bug when importing `v-loading`
-    // See: https://github.com/element-plus/element-plus/issues/4855
-    config.externals({
-      'element-plus/es/components/loading-directive/style/css': 'undefined',
-    })
 
-    config.plugin('element-plus').use(ElementPlusPlugin())
+      // https://github.com/element-plus/unplugin-element-plus/
+      ElementPlus(),
 
-    // Temp: Disable UnoCSS until @unocss/webpack bug fixed:
-    // https://github.com/unocss/unocss/issues/797
-    // config.plugin('unocss').use(UnocssPlugin())
+      // https://github.com/unocss/unocss
+      // see unocss.config.ts for config
+      Unocss(),
+    ],
   },
+  // chainWebpack(config) {
+  // Temporary workaround for Element Plus + unplugin-vue-components bug when importing `v-loading`
+  // See: https://github.com/element-plus/element-plus/issues/4855
+  // config.externals({
+  //   'element-plus/es/components/loading-directive/style/css': 'undefined',
+  // })
+  // },
 }
