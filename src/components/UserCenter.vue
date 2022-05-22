@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { AccountBoxFilled } from '@vicons/material'
-import { Icon } from '@vicons/utils'
-
 import useUserStore from '~/stores/user'
 
 const store = useUserStore()
@@ -10,10 +7,7 @@ const name = store.name
 
 <template>
   <div class="right">
-    <!-- <div i-mdi-account-box inline-block align-middle color-red></div> -->
-    <Icon size="20" color="red" style="vertical-align: middle">
-      <AccountBoxFilled />
-    </Icon>
+    <div i-mdi-account-box inline-block align-middle color-red></div>
     <span>{{ name }}</span>
   </div>
 </template>
