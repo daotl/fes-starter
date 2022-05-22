@@ -67,11 +67,4 @@ export default {
       Unocss(),
     ],
   },
-  // chainWebpack(config) {
-  // Temporary workaround for Element Plus + unplugin-vue-components bug when importing `v-loading`
-  // See: https://github.com/element-plus/element-plus/issues/4855
-  // config.externals({
-  //   'element-plus/es/components/loading-directive/style/css': 'undefined',
-  // })
-  // },
 }

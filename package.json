@@ -66,12 +66,10 @@
     "@unocss/preset-typography": "^0.34.0",
     "@unocss/preset-web-fonts": "^0.34.0",
     "@unocss/reset": "^0.34.0",
-    "@unocss/webpack": "^0.34.0",
     "@vue/compiler-sfc": "^3.2.35",
     "core-js": "^3.22.5",
     "cross-env": "^7.0.3",
     "eslint": "^8.16.0",
-    "eslint-webpack-plugin": "^3.1.1",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "pnpm": "^7.1.3",
@@ -86,13 +84,11 @@
     "stylelint-config-recommended": "^7.0.0",
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-webpack-plugin": "^3.3.0",
     "typescript": "^4.6.4",
     "unocss": "^0.34.0",
     "unplugin-auto-import": "^0.7.2",
     "unplugin-element-plus": "^0.4.0",
     "unplugin-vue-components": "^0.19.5",
-    "vite": "^2.9.9",
-    "webpack": "^5.72.1"
+    "vite": "^2.9.9"
   }
 }
