@@ -8,7 +8,8 @@
       "@@/*": ["src/.fes/*", "src/.fes-production/*"]
     },
     "types": ["node", "jest", "element-plus/global"],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "target": "es2020"
   },
   "exclude": [
     "node_modules",
