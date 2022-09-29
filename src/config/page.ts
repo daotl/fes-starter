@@ -61,7 +61,7 @@ function flattenPagesToMap(pages: Page[]): Record<string, Page> {
     if (page.children?.length) {
       newMap = {
         ...newMap,
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
         ...flattenPagesToMap(page.children),
       }
     }

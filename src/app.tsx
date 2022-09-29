@@ -33,7 +33,6 @@ export const beforeRender = {
   },
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function rootContainer(container: ComponentOptions) {
   return (): ComponentOptions => {
     return (

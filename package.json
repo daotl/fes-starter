@@ -3,6 +3,16 @@
   "version": "3.0.0",
   "private": true,
   "description": "A fes.js + TypeScript starter template",
+  "author": "Nex Zhu <hitnexup@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/daotl/fes-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daotl/fes-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daotl/fes-starter/issues"
+  },
   "keywords": [
     "管理端",
     "fes",
@@ -10,12 +20,6 @@
     "easy",
     "strong"
   ],
-  "license": "MIT",
-  "author": "Nex Zhu <hitnexup@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/daotl/fes-starter.git"
-  },
   "scripts": {
     "build": "cross-env RM_TMPDIR=none fes build",
     "prod": "cross-env FES_ENV=prod RM_TMPDIR=none fes build",
@@ -31,10 +35,6 @@
     "prepare": "husky install"
   },
   "prettier": "@daotl/prettier-config",
-  "bugs": {
-    "url": "https://github.com/daotl/fes-starter/issues"
-  },
-  "homepage": "https://github.com/daotl/fes-starter#readme",
   "publishConfig": {
     "access": "public"
   },
