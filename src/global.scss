@@ -1,3 +1,1 @@
-body {
-  margin:0;
-}
+// import \"./styles/global.scss\" manually in \"app.tsx\" because Fes.js import \"global.scss\" after scripts and Element Plus's auto-imported styles, causing CSS reset to override them
