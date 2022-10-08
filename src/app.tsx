@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-unresolved
 import 'uno.css'
+import './styles/global.scss'
 
 import { access /* , pinia */ } from '@fesjs/fes'
 // import { ElConfigProvider, ElLoading } from 'element-plus'
