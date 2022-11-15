@@ -1,6 +1,6 @@
 # fes-starter
 
-A [fes.js](https://github.com/WeBankFinTech/fes.js) + TypeScript starter template.
+A [fes.js](https://github.com/WeBankFinTech/fes.js) + Vite + TypeScript starter template.
 
 ## Technology stack
 
@@ -8,7 +8,7 @@ Basic:
 
 - [pnpm](https://pnpm.io/) for efficient package management
 - [TypeScript](https://www.typescriptlang.org/)
-- [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Webpack](https://webpack.js.org/)
+- [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Vite](https://vitejs.dev/)
 - [JSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
 - [SASS](https://sass-lang.com/) with [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax for styling
 - [ESLint](https://eslint.org/) with [@daotl/eslint-config-vue](https://github.com/daotl/web-style-configs#using-eslint-config) for linting
@@ -17,13 +17,10 @@ Basic:
 
 `master` branch:
 
-(Temporally dsiabled UnoCSS until [@unocss/webpack bug](https://github.com/unocss/unocss/issues/797) fixed)
-
 - [Element Plus](https://element-plus.org/): component library
 - [Pinia](https://pinia.vuejs.org/): state management
-- ~~[UnoCSS](https://github.com/unocss/unocss): atomic CSS library~~
-- ~~[Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)~~
-- [xicons](https://github.com/07akioni/xicons) (Temporally using this until [@unocss/webpack bug](https://github.com/unocss/unocss/issues/797) fixed)
+- [UnoCSS](https://github.com/unocss/unocss): atomic CSS library
+- [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
 
 `antd` branch (not maintained):
 
