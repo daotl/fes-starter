@@ -1,12 +1,13 @@
 /* eslint-disable import/no-unresolved */
+import path from 'node:path'
 
-// .fes.js 只负责管理编译时配置，只能使用plain Object
 import Unocss from '@unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 
+// .fes.js 只负责管理编译时配置，只能使用plain Object
 export default {
   publicPath: './',
   alias: {
@@ -23,6 +24,9 @@ export default {
     footer: 'Created by MumbleFE',
     multiTabs: false,
   },
+  viteVuePlugin: {
+    reactivityTransform: path.resolve(__dirname, 'src'),
+  },
   viteOption: {
     server: {
       // Uncomment when running in a container
@@ -36,7 +40,9 @@ export default {
           'vue',
           'vue-router',
           'vue-i18n',
-          'vue/macros',
+          // This will cause error when importing component libraries:
+          // `Uncaught SyntaxError: The requested module '/.cache/deps/vue_macros.js?v=5b94560e' does not provide an export named '$$' (at index.532b0e7b.js:1:10)`
+          // 'vue/macros',
           '@vueuse/head',
           '@vueuse/core',
         ],
