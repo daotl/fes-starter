@@ -4,23 +4,19 @@ A [fes.js](https://github.com/WeBankFinTech/fes.js) + Vite + TypeScript starter 
 
 ## Technology stack
 
-Basic:
-
 - [pnpm](https://pnpm.io/) for efficient package management
 - [TypeScript](https://www.typescriptlang.org/)
 - [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Vite](https://vitejs.dev/)
 - [JSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
+- [Pinia](https://pinia.vuejs.org/): state management
 - [SASS](https://sass-lang.com/) with [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax for styling
+- [Element Plus](https://element-plus.org/): component library
+- [UnoCSS](https://github.com/unocss/unocss): atomic CSS library
+- [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
+- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 - [ESLint](https://eslint.org/) with [@daotl/eslint-config-vue](https://github.com/daotl/web-style-configs#using-eslint-config) for linting
 - [Prettier](https://prettier.io/) with [@daotl/prettier-config](https://github.com/daotl/web-style-configs#using-prettier-config) for code formatting
 - [Stylelint](https://stylelint.io/) for linting CSS and SCSS
-
-`master` branch:
-
-- [Element Plus](https://element-plus.org/): component library
-- [Pinia](https://pinia.vuejs.org/): state management
-- [UnoCSS](https://github.com/unocss/unocss): atomic CSS library
-- [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
 
 `antd` branch (not maintained):
 
