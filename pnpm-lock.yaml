@@ -12,6 +12,7 @@ specifiers:
   '@fesjs/plugin-access': 3.0.0-rc.1
   '@fesjs/plugin-layout': 5.0.0-rc.1
   '@fesjs/plugin-pinia': 3.0.0-rc.1
+  '@fesjs/plugin-qiankun': ^2.1.5
   '@iconify-json/mdi': ^1.1.34
   '@stylelint/postcss-css-in-js': ^0.38.0
   '@types/node': ^18.11.9
@@ -59,6 +60,7 @@ dependencies:
   '@fesjs/plugin-access': 3.0.0-rc.1_e75l6xviw47loue6264ychodra
   '@fesjs/plugin-layout': 5.0.0-rc.1_yzhknsasesoaoaaqzqjvov44xy
   '@fesjs/plugin-pinia': 3.0.0-rc.1_m3v6g7da6nvtyzzxexdck3bbo4
+  '@fesjs/plugin-qiankun': 2.1.5_e7witytu3dfor2du3hbpobvzri
   '@vueuse/core': 9.5.0_vue@3.2.45
   '@vueuse/head': 1.0.17_vue@3.2.45
   element-plus: 2.2.22_vue@3.2.45
@@ -1576,6 +1578,24 @@ packages:
       - supports-color
     dev: false
 
+  /@fesjs/plugin-qiankun/2.1.5_e7witytu3dfor2du3hbpobvzri:
+    resolution: {integrity: sha512-ygf8smQdC0YUHmRUVcFEBa5Og3d2brFSeLkWFQiSIhtAVbx5lDiKY0SHQ8DmI7GBFvbc07raehhjlMkKI2tL+Q==}
+    peerDependencies:
+      '@fesjs/fes': ^2.0.0
+      '@fesjs/fes-design': ^0.5.0
+      vue: ^3.2.37
+    dependencies:
+      '@fesjs/fes': 3.0.0-rc.1_vue@3.2.45
+      '@fesjs/fes-design': 0.7.9_vue@3.2.45
+      '@fesjs/utils': 2.0.4
+      address: 1.2.1
+      lodash-es: 4.17.21
+      qiankun: 2.8.4
+      vue: 3.2.45
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@fesjs/preset-built-in/3.0.0-rc.1_vue@3.2.45:
     resolution: {integrity: sha512-1HDpw3eqgSEnnnf2GCKHylicm9qUhRd3NrkGodB1efTG0Nz0xlkhfAdRkKFC7zIp5d1qWvwWsVDOR9pBn6Gzdg==}
     peerDependencies:
@@ -1598,6 +1618,31 @@ packages:
     dependencies:
       vue: 3.2.45
       vue-router: 4.1.6_vue@3.2.45
+
+  /@fesjs/utils/2.0.4:
+    resolution: {integrity: sha512-jnTs+ioRjYJ34LaoSzKeOQ5qgPJIYdeh+Uj9frjEJ2ZIIB+D+MyL82ciISRnnSs0XkocV5eNsb6Bs8p3/eEd4Q==}
+    dependencies:
+      '@babel/generator': 7.20.4
+      '@babel/parser': 7.20.3
+      '@babel/traverse': 7.20.1
+      chalk: 4.1.2
+      chokidar: 3.5.3
+      crequire: 1.8.1
+      debug: 4.3.4
+      deepmerge: 4.2.2
+      glob: 7.2.0
+      lodash: 4.17.21
+      mkdirp: 1.0.4
+      mustache: 4.2.0
+      pkg-up: 3.1.0
+      portfinder: 1.0.28
+      resolve: 1.22.1
+      rimraf: 3.0.2
+      semver: 7.3.7
+      yargs-parser: 20.2.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /@fesjs/utils/3.0.0-rc.1:
     resolution: {integrity: sha512-XvkWmYnLzJanYHfRZ9OSWXJc0L30Qtyu2MpyXBM2RiEHYZs4gWY5yOdsYWfz0Eyk4dPH6TanWdzInFrbrsKLGA==}
@@ -2621,6 +2666,11 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
+
+  /address/1.2.1:
+    resolution: {integrity: sha512-B+6bi5D34+fDYENiH5qOlA0cV2rAGKuWZ9LeyUUehbXy8e0VS9e498yO0Jeeh+iM+6KbfudHTFjXw2MmJD4QRA==}
+    engines: {node: '>= 10.0.0'}
+    dev: false
 
   /aggregate-error/3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
@@ -4867,6 +4917,12 @@ packages:
       resolve-from: 4.0.0
     dev: true
 
+  /import-html-entry/1.14.0:
+    resolution: {integrity: sha512-CQQMV+2rxHCLMSXsajV1cjT1g6xi3ujMAPnGwR96xHaN5/JEVIOUGkM7LDRn73dk8E8NaHmOf3rvPPExPPe1xw==}
+    dependencies:
+      '@babel/runtime': 7.20.1
+    dev: false
+
   /import-lazy/4.0.0:
     resolution: {integrity: sha512-rKtvo6a868b5Hu3heneU+L4yEQ4jYKLtjpnPeUdK7h0yzXGmyBTypknlkCvHFBqfX9YlorEiMM6Dnq/5atfHkw==}
     engines: {node: '>=8'}
@@ -6567,6 +6623,15 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /qiankun/2.8.4:
+    resolution: {integrity: sha512-9MCKTJZpb0L7CcWC80jNr4TZz9m2Pvh9QWHNKJ7vZAEUMRZBbMl3+wCV1VBcUJJIgfRMU5G+ksoW142rMFA0Ew==}
+    dependencies:
+      '@babel/runtime': 7.20.1
+      import-html-entry: 1.14.0
+      lodash: 4.17.21
+      single-spa: 5.9.4
+    dev: false
+
   /qs/6.10.3:
     resolution: {integrity: sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==}
     engines: {node: '>=0.6'}
@@ -6951,6 +7016,10 @@ packages:
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
+
+  /single-spa/5.9.4:
+    resolution: {integrity: sha512-QkEoh0AzGuU82qnbUUk0ydF78QbU5wMKqKKJn7uUQfBiOYlRQEfIOpLM4m23Sab+kTOLI1kbYhYeiQ7fX5KVVw==}
+    dev: false
 
   /sirv/2.0.2:
     resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}

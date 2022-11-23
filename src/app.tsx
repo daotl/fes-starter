@@ -13,6 +13,27 @@ import { CONFIG } from '~/config'
 import type { Page } from '~/config/pages'
 import { logger } from '~/utils/log'
 
+/* eslint-disable @typescript-eslint/require-await,no-console */
+export const qiankun = {
+  // 应用加载之前
+  async bootstrap(props): Promise<void> {
+    console.log('app1 bootstrap', props)
+  },
+  // 应用 render 之前触发
+  async mount(props): Promise<void> {
+    console.log('app1 mount', props)
+  },
+  // 当 props 更新时触发
+  async update(props): Promise<void> {
+    console.log('app1 update', props)
+  },
+  // 应用卸载之后触发
+  async unmount(props): Promise<void> {
+    console.log('app1 unmount', props)
+  },
+}
+/* eslint-enable @typescript-eslint/require-await,no-console */
+
 export function onAppCreated({ app: _app }: { app: App }): void {
   // pinia.use(somePiniaPlugin())
   // app.use(someVuePlugin())

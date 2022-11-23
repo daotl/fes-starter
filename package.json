@@ -45,6 +45,7 @@
     "@fesjs/plugin-access": "3.0.0-rc.1",
     "@fesjs/plugin-layout": "5.0.0-rc.1",
     "@fesjs/plugin-pinia": "3.0.0-rc.1",
+    "@fesjs/plugin-qiankun": "^2.1.5",
     "@vueuse/core": "^9.5.0",
     "@vueuse/head": "^1.0.17",
     "element-plus": "^2.2.22",
