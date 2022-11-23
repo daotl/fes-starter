@@ -32,8 +32,7 @@
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "stylelint": "stylelint \"**/*.{css,scss,vue,tsx}\"",
-    "stylelint:fix": "stylelint \"**/*.{css,scss,vue,tsx}\" --fix",
-    "prepare": "husky install"
+    "stylelint:fix": "stylelint \"**/*.{css,scss,vue,tsx}\" --fix"
   },
   "prettier": "@daotl/prettier-config",
   "publishConfig": {
@@ -73,7 +72,7 @@
     "core-js": "^3.26.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.28.0",
-    "husky": "^8.0.2",
+    "lefthook": "^1.2.1",
     "lint-staged": "^13.0.3",
     "pnpm": "^7.17.0",
     "postcss": "^8.4.19",
