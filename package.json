@@ -31,8 +31,8 @@
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
-    "stylelint": "stylelint \"**/*.{css,scss,vue,tsx}\"",
-    "stylelint:fix": "stylelint \"**/*.{css,scss,vue,tsx}\" --fix"
+    "stylelint": "stylelint \"src/**/*.{css,scss,vue,tsx}\"",
+    "stylelint:fix": "stylelint \"src/**/*.{css,scss,vue,tsx}\" --fix"
   },
   "prettier": "@daotl/prettier-config",
   "publishConfig": {
