@@ -28,6 +28,11 @@ export default {
     reactivityTransform: path.resolve(__dirname, 'src'),
   },
   viteOption: {
+    resolve: {
+      // Fix issue when component libraries in the workspace are using different versions of deps like Vue
+      // See: https://github.com/vuejs/core/issues/4344#issuecomment-1023220225
+      dedupe: ['vue', 'vue-i18n', 'vue-router', 'element-plus'],
+    },
     server: {
       // Uncomment when running in a container
       // host: '0.0.0.0',
