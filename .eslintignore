@@ -1,9 +1,17 @@
 !.fes.js
 !.stylelintrc.js
+docker
+k8s
 node_modules
 dist
 public
-src/types/auto-imports.d.ts
-src/types/components.d.ts
 src/.fes
 src/.fes-production
+src/types/auto-imports.d.ts
+src/types/components.d.ts
+*.css
+*.scss
+*.sass
+generated
+# Fix: `sw.js` generated in ./some-random-hash/sw.js causing ESLint to fail
+*/sw.js
