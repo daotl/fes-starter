@@ -9,8 +9,6 @@ specifiers:
   '@fesjs/builder-vite': 3.0.0-rc.1
   '@fesjs/fes': 3.0.0-rc.2
   '@fesjs/fes-design': ^0.7.10
-  '@fesjs/plugin-access': 3.0.0-rc.2
-  '@fesjs/plugin-layout': 5.0.0-rc.2
   '@fesjs/plugin-pinia': 3.0.0-rc.2
   '@iconify-json/mdi': ^1.1.36
   '@stylelint/postcss-css-in-js': ^0.38.0
@@ -58,8 +56,6 @@ specifiers:
 dependencies:
   '@fesjs/fes': 3.0.0-rc.2_vue@3.2.45
   '@fesjs/fes-design': 0.7.10_vue@3.2.45
-  '@fesjs/plugin-access': 3.0.0-rc.2_jkm2azdytzxix746ctvxhgoxse
-  '@fesjs/plugin-layout': 5.0.0-rc.2_rzcthw5e4bf7oqjgo7muoi3t3q
   '@fesjs/plugin-pinia': 3.0.0-rc.2_6fv4uocgbyieku7u6b7kzc3zb4
   '@vueuse/core': 9.6.0_vue@3.2.45
   '@vueuse/head': 1.0.19_vue@3.2.45
@@ -1571,39 +1567,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - vue
-
-  /@fesjs/plugin-access/3.0.0-rc.2_jkm2azdytzxix746ctvxhgoxse:
-    resolution: {integrity: sha512-mg35RQs2STuG881s7xTftfDpDrwADXLzKHM/7EqT9fttiFa685aMFx/bk0c9Fn1LBs0FmqsGgKKNLLx6/A2EBQ==}
-    peerDependencies:
-      '@fesjs/fes': 3.0.0-rc.2
-      vue: ^3.2.37
-      vue-router: ^4.0.1
-    dependencies:
-      '@fesjs/fes': 3.0.0-rc.2_vue@3.2.45
-      '@fesjs/utils': 3.0.0-rc.2
-      lodash-es: 4.17.21
-      vue: 3.2.45
-      vue-router: 4.1.6_vue@3.2.45
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@fesjs/plugin-layout/5.0.0-rc.2_rzcthw5e4bf7oqjgo7muoi3t3q:
-    resolution: {integrity: sha512-L0Y48tKVhYfqu/O7ugfnthkJocKj/GUhnR2CVvWBcVYoAcza4d9Oxx7OkP345fU//LxXL4DlpVcchSVAhHa1vg==}
-    peerDependencies:
-      '@fesjs/fes': 3.0.0-rc.2
-      '@fesjs/fes-design': ^0.7.0
-      vue: ^3.2.37
-      vue-router: ^4.0.1
-    dependencies:
-      '@fesjs/fes': 3.0.0-rc.2_vue@3.2.45
-      '@fesjs/fes-design': 0.7.10_vue@3.2.45
-      '@fesjs/utils': 3.0.0-rc.2
-      vue: 3.2.45
-      vue-router: 4.1.6_vue@3.2.45
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /@fesjs/plugin-pinia/3.0.0-rc.2_6fv4uocgbyieku7u6b7kzc3zb4:
     resolution: {integrity: sha512-W5yoUAmaC2uolOpF/wHnIQktbLd4KjiXuceob6NGV4mDNtZfGNrP4ZFO57cEdjMijdutncaWpkqX99YS+569yg==}

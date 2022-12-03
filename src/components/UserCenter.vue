@@ -6,7 +6,7 @@ const name = store.name
 </script>
 
 <template>
-  <div class="right">
+  <div class="right" bg-blue>
     <div i-mdi-account-box inline-block align-middle color-red></div>
     <span>{{ name }}</span>
   </div>

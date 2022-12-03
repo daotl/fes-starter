@@ -16,18 +16,6 @@ export default {
   alias: {
     '~': '/src',
   },
-  access: {
-    roles: {
-      admin: ['*'],
-      manager: ['/'],
-    },
-  },
-  layout: {
-    title: 'Fes.js',
-    footer: 'Created by MumbleFE',
-    theme: 'dark',
-    multiTabs: false,
-  },
   viteVuePlugin: {
     reactivityTransform: path.resolve(__dirname, 'src'),
   },

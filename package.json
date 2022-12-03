@@ -41,8 +41,6 @@
   "dependencies": {
     "@fesjs/fes": "3.0.0-rc.2",
     "@fesjs/fes-design": "^0.7.10",
-    "@fesjs/plugin-access": "3.0.0-rc.2",
-    "@fesjs/plugin-layout": "5.0.0-rc.2",
     "@fesjs/plugin-pinia": "3.0.0-rc.2",
     "@vueuse/core": "^9.6.0",
     "@vueuse/head": "^1.0.19",
