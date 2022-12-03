@@ -48,7 +48,7 @@ export const layout = (
   layoutConfig: Record<string, unknown>,
 ): Record<string, unknown> => ({
   ...layoutConfig,
-  customHeader: UserCenter,
+  renderCustom: () => <UserCenter />,
   menus: (_defaultMenuData: Page[]): Ref<typeof CONFIG.menus> => {
     // We are not using default values from `.fes.js`
     // const menusRef = ref(defaultMenuData)

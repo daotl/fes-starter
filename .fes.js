@@ -25,6 +25,7 @@ export default {
   layout: {
     title: 'Fes.js',
     footer: 'Created by MumbleFE',
+    theme: 'dark',
     multiTabs: false,
   },
   viteVuePlugin: {
