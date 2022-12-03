@@ -2,6 +2,8 @@
 
 A [fes.js](https://github.com/WeBankFinTech/fes.js) + Vite + TypeScript starter template.
 
+Checkout the [`single-page` branch](https://github.com/daotl/fes-starter/tree/single-page) for single page apps like dashboards (no Vue Router)
+
 ## Technology stack
 
 - ⚡️ [Vue 3](https://v3.vuejs.org/), [fes.js](https://github.com/WeBankFinTech/fes.js), [Vite 3](https://vitejs.dev/) - born with fastness
