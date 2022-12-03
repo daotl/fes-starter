@@ -39,9 +39,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@fesjs/fes": "3.0.0-rc.2",
+    "@fesjs/fes": "^3.0.0-rc.2",
     "@fesjs/fes-design": "^0.7.10",
-    "@fesjs/plugin-pinia": "3.0.0-rc.2",
+    "@fesjs/plugin-pinia": "^3.0.0-rc.2",
     "@vueuse/core": "^9.6.0",
     "@vueuse/head": "^1.0.19",
     "element-plus": "^2.2.26",
@@ -54,10 +54,10 @@
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/runtime": "^7.20.6",
-    "@daotl/eslint-config-vue": "0.3.32",
+    "@daotl/eslint-config-vue": "^0.3.32",
     "@daotl/prettier-config": "^0.1.3",
     "@daotl/tsconfig": "^0.1.2",
-    "@fesjs/builder-vite": "3.0.0-rc.1",
+    "@fesjs/builder-vite": "^3.0.0-rc.1",
     "@iconify-json/mdi": "^1.1.36",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/node": "^18.11.10",

@@ -1,0 +1,18 @@
+:80
+
+# Proxy `/api` to backends
+handle_path /api/rest/* {
+	rewrite * /api/v1{path}
+	reverse_proxy {$BAAS_HOST}
+}
+handle_path /api/ws/* {
+	reverse_proxy {$CONTROL_PROXY_HOST}
+}
+
+# Frontend
+handle {
+	root * /frontend
+	encode gzip
+	try_files {path} /index.html
+	file_server
+}
