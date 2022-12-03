@@ -4,23 +4,25 @@ A [fes.js](https://github.com/WeBankFinTech/fes.js) + Vite + TypeScript starter 
 
 ## Technology stack
 
-- [pnpm](https://pnpm.io/) for efficient package management
-- [TypeScript](https://www.typescriptlang.org/)
-- [fes.js](https://github.com/WeBankFinTech/fes.js) based on [Vue 3](https://v3.vuejs.org/) and [Vite](https://vitejs.dev/)
-- [JSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
-- [Pinia](https://pinia.vuejs.org/): state management
-- [SASS](https://sass-lang.com/) with [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax for styling
-- [Element Plus](https://element-plus.org/): component library
-- [UnoCSS](https://github.com/unocss/unocss): atomic CSS library
-- [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
-- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-- [ESLint](https://eslint.org/) with [@daotl/eslint-config-vue](https://github.com/daotl/web-style-configs#using-eslint-config) for linting
-- [Prettier](https://prettier.io/) with [@daotl/prettier-config](https://github.com/daotl/web-style-configs#using-prettier-config) for code formatting
-- [Stylelint](https://stylelint.io/) for linting CSS and SCSS
-
-`antd` branch (not maintained):
-
-- [Ant Design Vue](https://www.antdv.com/): component library
+- ⚡️ [Vue 3](https://v3.vuejs.org/), [fes.js](https://github.com/WeBankFinTech/fes.js), [Vite 3](https://vitejs.dev/) - born with fastness
+- 📦 [pnpm](https://pnpm.io/) for efficient package management
+- 🦾 [TypeScript](https://www.typescriptlang.org/)
+- ⭐ [JSX/TSX](https://v3.vuejs.org/guide/render-function.html#jsx) (optional, to replace Vue's template syntax)
+- 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
+- 🤙🏻 [Reactivity Transform](https://vuejs.org/guide/extras/reactivity-transform.html) enabled
+- 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
+- 📦 [Components auto importing](./src/components)
+- 🔎 [Component Preview](https://github.com/johnsoncodehk/vite-plugin-vue-component-preview) and [jump to code](https://github.com/webfansplz/vite-plugin-vue-inspector)
+- 🍍 [Pinia](https://pinia.vuejs.org/) - state management
+- 🖌️ [SASS](https://sass-lang.com/) with [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax for styling
+- 🧰 [Element Plus](https://element-plus.org/) - component library
+- 🎨 [UnoCSS](https://github.com/unocss/unocss) - the instant on-demand atomic CSS engine
+- 😃 [Pure CSS icons with UnoCSS](https://github.com/unocss/unocss/tree/main/packages/preset-icons) - Use icons from any icon sets with classes
+- 🛠️ [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
+- 💪 [Lefthook](https://github.com/evilmartians/lefthook) for linting codes on commit
+- ✔️ [ESLint](https://eslint.org/) with [@daotl/eslint-config-vue](https://github.com/daotl/web-style-configs#using-eslint-config) for linting
+- ✔️ [Prettier](https://prettier.io/) with [@daotl/prettier-config](https://github.com/daotl/web-style-configs#using-prettier-config) for code formatting
+- ✔️ [Stylelint](https://stylelint.io/) for linting CSS and SCSS
 
 ## Project setup
 

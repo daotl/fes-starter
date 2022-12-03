@@ -6,6 +6,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import Inspect from 'vite-plugin-inspect'
+import Preview from 'vite-plugin-vue-component-preview'
+import Inspector from 'vite-plugin-vue-inspector'
 
 // .fes.js 只负责管理编译时配置，只能使用plain Object
 export default {
@@ -39,6 +42,8 @@ export default {
       port: 8000,
     },
     plugins: [
+      Preview(),
+
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: [
@@ -76,6 +81,16 @@ export default {
       // https://github.com/unocss/unocss
       // see unocss.config.ts for config
       Unocss(),
+
+      // https://github.com/antfu/vite-plugin-inspect
+      // Visit http://localhost:3333/__inspect/ to see the inspector
+      Inspect(),
+
+      // https://github.com/webfansplz/vite-plugin-vue-inspector
+      Inspector({
+        enabled: true,
+        toggleComboKey: 'control-i',
+      }),
     ],
   },
 }
