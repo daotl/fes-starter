@@ -1,0 +1,36 @@
+ARG CADDY_VERSION=2.6
+ARG BUILD_ENV=prod
+
+
+# The base for mode ENVIRONMENT=prod
+FROM caddy:${CADDY_VERSION}-alpine as prod
+
+LABEL maintainer="hitnexup@gmail.com"
+LABEL cn.fusiongalaxy.version="dev"
+LABEL cn.fusiongalaxy.version.isproduction="false"
+LABEL cn.fusiongalaxy.version.release-date="2022-12"
+
+
+# Workaround for https://github.com/alpinelinux/docker-alpine/issues/98#issuecomment-679278499
+RUN sed -i 's/https/http/' /etc/apk/repositories \
+ && apk add --no-cache bash
+
+COPY docker/entrypoint.sh /
+COPY docker/rewrite-html-meta-config.sh /
+COPY docker/Caddyfile /etc/caddy/
+COPY dist /frontend
+
+
+# The base for mode ENVIRONMENT=dev, install dev tools
+FROM prod as dev
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
+ && apk add --no-cache busybox-extras
+
+
+# Run stage
+FROM ${BUILD_ENV}
+
+EXPOSE 80 443
+VOLUME ["/data", "/etc/caddy"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
