@@ -63,7 +63,6 @@
     "@iconify-json/mdi": "^1.1.52",
     "@types/node": "^20.2.3",
     "@unocss/reset": "^0.52.0",
-    "@vue/compiler-sfc": "^3.3.4",
     "core-js": "^3.30.2",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^7.0.0",

@@ -69,9 +69,6 @@ devDependencies:
   '@unocss/reset':
     specifier: ^0.52.0
     version: registry.npmmirror.com/@unocss/reset@0.52.0
-  '@vue/compiler-sfc':
-    specifier: ^3.3.4
-    version: registry.npmmirror.com/@vue/compiler-sfc@3.3.4
   core-js:
     specifier: ^3.30.2
     version: registry.npmmirror.com/core-js@3.30.2
