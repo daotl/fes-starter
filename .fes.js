@@ -39,8 +39,8 @@ export default {
     },
     server: {
       // Uncomment when running in a container
-      // host: '0.0.0.0',
-      port: 8000,
+      host: '0.0.0.0',
+      // port: 8000,
     },
     plugins: [
       Preview(),
