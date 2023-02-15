@@ -89,8 +89,8 @@ export default {
 
       // https://github.com/webfansplz/vite-plugin-vue-inspector
       Inspector({
-        enabled: true,
-        toggleComboKey: 'control-i',
+        toggleButtonVisibility: 'never',
+        toggleComboKey: 'control-alt-i',
       }),
     ],
   },
