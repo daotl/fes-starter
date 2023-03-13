@@ -51,7 +51,7 @@ function flattenPages(pages: Page[]): Page[] {
   return pages.flatMap((p) => [p, ...flattenPages(p.children || [])])
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
 function flattenPagesToMap(pages: Page[]): Record<string, Page> {
   return pages.reduce<Record<string, Page>>((map, page) => {
     let newMap = {
