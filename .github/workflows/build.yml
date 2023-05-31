@@ -20,6 +20,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      # Needs to come first, `actions/setup-node` uses `pnpm-lock.yaml`
+      - uses: actions/checkout@v3
+
       - uses: pnpm/action-setup@v2
         with:
           version: latest
@@ -29,8 +32,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
       - run: pnpm add -g concurrently
-
-      - uses: actions/checkout@v3
 
       - run: pnpm install --frozen-lockfile
       - run: concurrently "pnpm build" "pnpm lint"
