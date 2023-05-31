@@ -20,15 +20,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
-
-      - uses: pnpm/action-setup@v2
-        with:
-          version: latest
       - run: pnpm add -g concurrently
 
       - uses: actions/checkout@v3
