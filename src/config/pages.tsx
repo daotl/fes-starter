@@ -36,6 +36,6 @@ export const PAGES: Page[] = [
     // 首页
     name: 'home',
     path: '/home',
-    icon: <div class="i-mdi-home" />,
+    icon: <div class='i-mdi-home' />,
   },
 ]

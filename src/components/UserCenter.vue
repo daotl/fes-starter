@@ -7,7 +7,7 @@ const name = store.name
 
 <template>
   <div class="right">
-    <div i-mdi-account-box inline-block align-middle color-red></div>
+    <div i-mdi-account-box inline-block align-middle color-red />
     <span>{{ name }}</span>
   </div>
 </template>

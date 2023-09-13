@@ -22,7 +22,7 @@ export const beforeRender = {
   loading: PageLoading,
   action(): Promise<Record<string, unknown>> {
     const { setAccess /* , *setRole */ } = access
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       // Access data can be requested from backend / read from HTML meta tags etc.
       // setTimeout(() => {
       void setAccess(CONFIG.enabledPagePaths)

@@ -22,7 +22,9 @@ const increment = (): void => {
     <h4>数据字典</h4>
     <section>
       计数器
-      <el-button @click="increment">click me：{{ count }}</el-button>
+      <el-button @click="increment">
+        click me：{{ count }}
+      </el-button>
     </section>
   </div>
 </template>

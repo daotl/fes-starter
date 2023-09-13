@@ -3,5 +3,5 @@ const loading = true
 </script>
 
 <template>
-  <div v-loading.fullscreen="loading"></div>
+  <div v-loading.fullscreen="loading" />
 </template>
