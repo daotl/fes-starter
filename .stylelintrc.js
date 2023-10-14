@@ -50,8 +50,14 @@ module.exports = {
     },
     {
       files: 'src/**/*.tsx',
-      customSyntax: '@stylelint/postcss-css-in-js',
+      customSyntax: 'postcss-styled-syntax',
       extends: ['stylelint-config-recommended-scss', ...commonExtends],
     },
+    // Temporary disabled for issue: https://github.com/stylelint/stylelint/issues/4481
+    // {
+    //   files: 'src/**/*.tsx',
+    //   customSyntax: '@stylelint/postcss-css-in-js',
+    //   extends: ['stylelint-config-recommended-scss', ...commonExtends],
+    // },
   ],
 }

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import path from 'node:path'
 
 import Unocss from '@unocss/vite'
@@ -27,8 +26,8 @@ export default {
     },
     server: {
       // Uncomment when running in a container
-      // host: '0.0.0.0',
-      port: 8000,
+      host: '0.0.0.0',
+      // port: 8000,
     },
     plugins: [
       Preview(),
@@ -77,8 +76,8 @@ export default {
 
       // https://github.com/webfansplz/vite-plugin-vue-inspector
       Inspector({
-        enabled: true,
-        toggleComboKey: 'control-i',
+        toggleButtonVisibility: 'never',
+        toggleComboKey: 'control-alt-i',
       }),
     ],
   },

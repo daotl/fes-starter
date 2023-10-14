@@ -10,12 +10,13 @@ const useUserStore = defineStore('user', {
 
 // Enable HMR for supported bundlers
 // See: https://pinia.vuejs.org/cookbook/hot-module-replacement.html
-/* eslint-disable */
-// @ts-ignore
+// eslint-disable-next-line ts/ban-ts-comment
+// @ts-expect-error
 if (import.meta.hot) {
-  // @ts-ignore
+  // eslint-disable-next-line ts/ban-ts-comment
+  // @ts-expect-error
+  // eslint-disable-next-line ts/no-unsafe-call,ts/no-unsafe-member-access
   import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
 }
-/* eslint-enable */
 
 export default useUserStore
