@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import 'uno.css'
 import './styles/global.scss'
 
@@ -22,7 +21,7 @@ export const beforeRender = {
   loading: PageLoading,
   action(): Promise<Record<string, unknown>> {
     const { setAccess /* , *setRole */ } = access
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       // Access data can be requested from backend / read from HTML meta tags etc.
       // setTimeout(() => {
       void setAccess(CONFIG.enabledPagePaths)
@@ -34,30 +33,30 @@ export const beforeRender = {
   },
 }
 
-export function rootContainer(container: ComponentOptions) {
+export function rootContainer(Container: ComponentOptions) {
   return (): ComponentOptions => {
     return (
       // <ElConfigProvider locale={elementZhCn}>
-      <container></container>
+      <Container></Container>
       // </ElConfigProvider>
     )
   }
 }
 
-export const layout = (
-  layoutConfig: Record<string, unknown>,
-): Record<string, unknown> => ({
-  ...layoutConfig,
-  renderCustom: () => <UserCenter />,
-  menus: (_defaultMenuData: Page[]): Ref<typeof CONFIG.menus> => {
+export function layout(layoutConfig: Record<string, unknown>): Record<string, unknown> {
+  return {
+    ...layoutConfig,
+    renderCustom: () => <UserCenter />,
+    menus: (_defaultMenuData: Page[]): Ref<typeof CONFIG.menus> => {
     // We are not using default values from `.fes.js`
     // const menusRef = ref(defaultMenuData)
-    const menusRef = ref(CONFIG.menus)
+      const menusRef = ref(CONFIG.menus)
 
-    // If need to change dynamically:
-    // watch(() => layoutConfig.initialState.userName, () => {
-    //     menusRef.value = CONFIG.menus
-    // })
-    return menusRef
-  },
-})
+      // If need to change dynamically:
+      // watch(() => layoutConfig.initialState.userName, () => {
+      //     menusRef.value = CONFIG.menus
+      // })
+      return menusRef
+    },
+  }
+}

@@ -1,15 +1,15 @@
 {
   "extends": "@daotl/tsconfig/vue.json",
   "compilerOptions": {
-    "outDir": "build/dist",
+    "target": "es2020",
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
       "@@/*": ["src/.fes/*", "src/.fes-production/*"]
     },
     "types": ["node", "jest", "element-plus/global"],
-    "allowSyntheticDefaultImports": true,
-    "target": "es2020"
+    "outDir": "build/dist",
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules",

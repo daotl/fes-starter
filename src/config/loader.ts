@@ -9,8 +9,10 @@
 function getConfigValue(key: string): string | undefined {
   // get value from meta tag
   const value = getMetaValue(key)
+  // eslint-disable-next-line node/prefer-global/process
   if (!value && process.env && process.env[`FES_APP_${key}`] !== undefined) {
     // get env var value
+    // eslint-disable-next-line node/prefer-global/process
     return process.env[`FES_APP_${key}`]
   }
   return value

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import path from 'node:path'
 
 import Unocss from '@unocss/vite'

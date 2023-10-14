@@ -11,7 +11,7 @@ import useCounterStore from '~/stores/counter'
 const store = useCounterStore()
 const count = computed(() => store.clicked)
 
-const increment = (): void => {
+function increment(): void {
   store.clicked++
 }
 </script>

@@ -4,14 +4,14 @@ import { PAGES } from './pages'
 
 function filterMenus(pages: Page[]): Page[] {
   return pages
-    .filter(p => p.sidebar !== false)
-    .map(p =>
+    .filter((p) => p.sidebar !== false)
+    .map((p) =>
       p.children
         ? {
-          ...p,
-          children: filterMenus(p.children),
-        }
-        : p
+            ...p,
+            children: filterMenus(p.children),
+          }
+        : p,
     )
 }
 
@@ -24,8 +24,9 @@ let enabledPages: Page[]
 // If not set, enabled all pages
 if (!enabledPageNamesStr) {
   enabledPages = flattenPages(PAGES)
-} else {
-  const enabledPageNames = enabledPageNamesStr.split(',').map(s => s.trim())
+}
+else {
+  const enabledPageNames = enabledPageNamesStr.split(',').map((s) => s.trim())
   // `index` should always be included
   if (!enabledPageNames.includes('index')) {
     enabledPageNames.push('index')
@@ -34,21 +35,21 @@ if (!enabledPageNamesStr) {
 }
 
 export const enabledPagePaths = enabledPages
-  .map(p => p.path)
-  .filter(path => path)
+  .map((p) => p.path)
+  .filter((path) => path)
 
 /* Util functions */
 
 function flattenEnabledPages(pages: Page[], names: string[]): Page[] {
-  return pages.flatMap(p =>
+  return pages.flatMap((p) =>
     names.includes(p.name)
       ? [p, ...flattenPages(p.children || [])]
-      : flattenEnabledPages(p.children || [], names)
+      : flattenEnabledPages(p.children || [], names),
   )
 }
 
 function flattenPages(pages: Page[]): Page[] {
-  return pages.flatMap(p => [p, ...flattenPages(p.children || [])])
+  return pages.flatMap((p) => [p, ...flattenPages(p.children || [])])
 }
 
 // eslint-disable-next-line unused-imports/no-unused-vars
