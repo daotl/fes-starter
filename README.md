@@ -14,7 +14,7 @@ Checkout the [`single-page` branch](https://github.com/daotl/fes-starter/tree/si
 - 🤙🏻 [Reactivity Transform](https://vuejs.org/guide/extras/reactivity-transform.html) enabled
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 - 📦 [Components auto importing](./src/components)
-- 🔎 [Component Preview](https://github.com/johnsoncodehk/vite-plugin-vue-component-preview) and [jump to code](https://github.com/webfansplz/vite-plugin-vue-inspector)
+- 🔎 [Jump to component code](https://github.com/webfansplz/vite-plugin-vue-inspector)
 - 🍍 [Pinia](https://pinia.vuejs.org/) - state management
 - 🖌️ [SASS](https://sass-lang.com/) with [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax for styling
 - 🧰 [Element Plus](https://element-plus.org/) - component library

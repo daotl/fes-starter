@@ -7,9 +7,23 @@
       "~/*": ["src/*"],
       "@@/*": ["src/.fes/*", "src/.fes-production/*"]
     },
-    "types": ["node", "jest", "element-plus/global"],
+    "types": [
+      "node",
+      "jest",
+      "vitest",
+      "vite/client",
+      "vue/ref-macros",
+      "unplugin-vue-macros/macros-global",
+      "element-plus/global"
+    ],
     "outDir": "build/dist",
     "allowSyntheticDefaultImports": true
+  },
+  "vueCompilerOptions": {
+    "plugins": [
+      "@vue-macros/volar/define-models",
+      "@vue-macros/volar/define-props-refs"
+    ]
   },
   "exclude": [
     "node_modules",

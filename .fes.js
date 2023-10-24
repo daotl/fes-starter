@@ -1,12 +1,14 @@
 import path from 'node:path'
 
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Unocss from '@unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import VueMacros from 'unplugin-vue-macros/vite'
+// import VueDevTools from 'vite-plugin-vue-devtools'
 import Inspect from 'vite-plugin-inspect'
-import Preview from 'vite-plugin-vue-component-preview'
 import Inspector from 'vite-plugin-vue-inspector'
 
 // .fes.js 只负责管理编译时配置，只能使用plain Object
@@ -42,7 +44,7 @@ export default {
       // port: 8000,
     },
     plugins: [
-      Preview(),
+      VueMacros(),
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
@@ -59,6 +61,8 @@ export default {
         // auto import Element Plus functions
         resolvers: [ElementPlusResolver()],
         dts: 'src/types/auto-imports.d.ts',
+        dirs: ['src/composables', 'src/stores'],
+        vueTemplate: true,
       }),
 
       // https://github.com/antfu/unplugin-vue-components
@@ -79,8 +83,16 @@ export default {
       ElementPlus(),
 
       // https://github.com/unocss/unocss
-      // see unocss.config.ts for config
+      // see uno.config.ts for config
       Unocss(),
+
+      // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
+      VueI18n({
+        runtimeOnly: true,
+        compositionOnly: true,
+        fullInstall: true,
+        include: [path.resolve(__dirname, 'locales/**')],
+      }),
 
       // https://github.com/antfu/vite-plugin-inspect
       // Visit http://localhost:3333/__inspect/ to see the inspector
@@ -91,6 +103,8 @@ export default {
         toggleButtonVisibility: 'never',
         toggleComboKey: 'control-alt-i',
       }),
+
+      // VueDevTools(),
     ],
   },
 }

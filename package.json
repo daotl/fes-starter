@@ -52,6 +52,7 @@
     "pinia": "^2.1.7",
     "prism-theme-vars": "^0.2.4",
     "vue": "^3.3.6",
+    "vue-i18n": "^9.5.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
@@ -61,8 +62,11 @@
     "@daotl/tsconfig": "^0.1.2",
     "@fesjs/builder-vite": "^3.0.3",
     "@iconify-json/mdi": "^1.1.54",
+    "@intlify/unplugin-vue-i18n": "^1.4.0",
     "@types/node": "^20.8.8",
     "@unocss/eslint-plugin": "^0.57.0",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vue-macros/volar": "^0.17.0",
     "core-js": "^3.33.1",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^7.3.0",
@@ -83,9 +87,10 @@
     "unplugin-auto-import": "^0.16.6",
     "unplugin-element-plus": "^0.8.0",
     "unplugin-vue-components": "^0.25.2",
+    "unplugin-vue-macros": "^2.6.1",
     "vite": "^4.5.0",
     "vite-plugin-inspect": "^0.7.40",
-    "vite-plugin-vue-component-preview": "^1.1.6",
+    "vite-plugin-vue-devtools": "1.0.0-rc.5",
     "vite-plugin-vue-inspector": "^4.0.0"
   }
 }

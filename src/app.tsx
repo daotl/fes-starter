@@ -12,9 +12,12 @@ import { CONFIG } from '~/config'
 import type { Page } from '~/config/pages'
 import { logger } from '~/utils/log'
 
-export function onAppCreated({ app: _app }: { app: App }): void {
-  // pinia.use(somePiniaPlugin())
-  // app.use(someVuePlugin())
+import type { UserModule } from './types'
+
+export function onAppCreated({ app }: { app: App }): void {
+  // install all modules under `modules/`
+  Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
+    .forEach((i) => i.install?.(app))
 }
 
 export const beforeRender = {

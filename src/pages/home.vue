@@ -14,17 +14,27 @@ const count = computed(() => store.clicked)
 function increment(): void {
   store.clicked++
 }
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div style="padding: 32px">
-    <h3>fes & 拉夫德鲁</h3>
-    <h4>数据字典</h4>
+    <h1>{{ t('title') }}</h1>
     <section>
-      计数器
+      {{ t('counter') }}
       <el-button @click="increment">
-        click me：{{ count }}
+        {{ t('click') }}: {{ count }}
       </el-button>
     </section>
   </div>
 </template>
+
+<i18n lang="yaml">
+en:
+  counter: Counter
+  click: click me
+zh-CN:
+  counter: 计数器
+  click: 点我
+</i18n>
