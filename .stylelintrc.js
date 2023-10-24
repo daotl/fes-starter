@@ -1,4 +1,8 @@
-const commonExtends = ['stylelint-config-property-sort-order-smacss']
+const commonExtends = [
+  'stylelint-config-html/html',
+  'stylelint-config-html/vue',
+  'stylelint-config-property-sort-order-smacss',
+]
 
 module.exports = {
   ignoreFiles: 'src/{.fes,.fes-production}/**/*',
@@ -53,11 +57,5 @@ module.exports = {
       customSyntax: 'postcss-styled-syntax',
       extends: ['stylelint-config-recommended-scss', ...commonExtends],
     },
-    // Temporary disabled for issue: https://github.com/stylelint/stylelint/issues/4481
-    // {
-    //   files: 'src/**/*.tsx',
-    //   customSyntax: '@stylelint/postcss-css-in-js',
-    //   extends: ['stylelint-config-recommended-scss', ...commonExtends],
-    // },
   ],
 }
