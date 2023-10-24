@@ -1,7 +1,7 @@
-const config = require('@daotl/eslint-config')
-const unocss = require('@unocss/eslint-plugin')
+import config from '@daotl/eslint-config'
+import unocss from '@unocss/eslint-plugin'
 
-module.exports = [
+export default [
   {
     ignores: [
       'cypress',
@@ -15,6 +15,6 @@ module.exports = [
       'scripts',
     ],
   },
-  ...config.default(),
+  ...config(),
   unocss.configs.flat,
 ]

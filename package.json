@@ -1,6 +1,7 @@
 {
   "name": "@daotl/fes-starter",
   "version": "3.0.0",
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@8.9.2",
   "description": "A fes.js + TypeScript starter template",
