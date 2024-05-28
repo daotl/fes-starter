@@ -15,7 +15,7 @@ const useCounterStore = defineStore('counter', {
 if (import.meta.hot) {
 // eslint-disable-next-line ts/ban-ts-comment
 // @ts-expect-error
-  // eslint-disable-next-line ts/no-unsafe-call,ts/no-unsafe-member-access
+
   import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot))
 }
 

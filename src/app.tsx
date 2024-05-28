@@ -17,7 +17,7 @@ import type { UserModule } from './types'
 export function onAppCreated({ app }: { app: App }): void {
   // install all modules under `modules/`
   Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
-    .forEach((i) => i.install?.(app))
+    .forEach(i => i.install?.(app))
 }
 
 export const beforeRender = {
@@ -38,18 +38,14 @@ export const beforeRender = {
 
 export function rootContainer(Container: ComponentOptions) {
   return (): ComponentOptions => {
-    return (
-      // <ElConfigProvider locale={elementZhCn}>
-      <Container></Container>
-      // </ElConfigProvider>
-    )
+    return h(Container)
   }
 }
 
 export function layout(layoutConfig: Record<string, unknown>): Record<string, unknown> {
   return {
     ...layoutConfig,
-    renderCustom: () => <UserCenter />,
+    renderCustom: () => h(UserCenter),
     menus: (_defaultMenuData: Page[]): Ref<typeof CONFIG.menus> => {
     // We are not using default values from `.fes.js`
     // const menusRef = ref(defaultMenuData)
