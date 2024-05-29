@@ -13,9 +13,4 @@ module.exports = config.default({
     '*/sw.js',
     'scripts',
   ],
-}, unocss.configs.flat, {
-  files: ['*.tsx'],
-  rules: {
-    'react/tsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
-  },
-})
+}, unocss.configs.flat)
